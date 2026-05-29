@@ -1,0 +1,955 @@
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Graphics,3,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [System,4,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Lang,5,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [Time,6,14,18]; ]
+import Toybox.Time;
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 7; @symbol_importdef<0> = [Toybox,7,7,13]; @symbol_importdef<1> = [Time,7,14,18]; @symbol_importdef<2> = [Gregorian,7,19,28]; ]
+import Toybox.Time.Gregorian;
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 9; @symbol_classdef = [Prc152View,9,6,16]; @symbol_extends<0> = [WatchUi,9,25,32]; @symbol_extends<1> = [WatchFace,9,33,42]; ]
+class Prc152View extends WatchUi.WatchFace {
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 9; ]
+    <init> {
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 20 16 ]
+        %tmp.1 = self;
+        symbol [ loadResource %tmp.2 20 30 42 ];
+        %tmp.2 = getv function %tmp.1 :loadResource;
+        symbol [ Rez %tmp.4 20 43 46 ];
+        %tmp.4 = getv ? :Rez;
+        symbol [ Fonts %tmp.5 20 47 52 ];
+        %tmp.5 = getv %tmp.4 :Fonts;
+        symbol [ MilFont16Bold %tmp.6 20 53 66 ];
+        %tmp.6 = getv %tmp.5 :MilFont16Bold;
+        %tmp.7 = invoke %tmp.1 %tmp.2(%tmp.6);
+        putv self :_milfont16b %tmp.7;
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 21 16 ]
+        %tmp.8 = self;
+        symbol [ loadResource %tmp.9 21 30 42 ];
+        %tmp.9 = getv function %tmp.8 :loadResource;
+        symbol [ Rez %tmp.11 21 43 46 ];
+        %tmp.11 = getv ? :Rez;
+        symbol [ Fonts %tmp.12 21 47 52 ];
+        %tmp.12 = getv %tmp.11 :Fonts;
+        symbol [ MilFont15Bold %tmp.13 21 53 66 ];
+        %tmp.13 = getv %tmp.12 :MilFont15Bold;
+        %tmp.14 = invoke %tmp.8 %tmp.9(%tmp.13);
+        putv self :_milfont15b %tmp.14;
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 22 16 ]
+        %tmp.15 = self;
+        symbol [ loadResource %tmp.16 22 30 42 ];
+        %tmp.16 = getv function %tmp.15 :loadResource;
+        symbol [ Rez %tmp.18 22 43 46 ];
+        %tmp.18 = getv ? :Rez;
+        symbol [ Fonts %tmp.19 22 47 52 ];
+        %tmp.19 = getv %tmp.18 :Fonts;
+        symbol [ MilFont34Bold %tmp.20 22 53 66 ];
+        %tmp.20 = getv %tmp.19 :MilFont34Bold;
+        %tmp.21 = invoke %tmp.15 %tmp.16(%tmp.20);
+        putv self :_milfont34b %tmp.21;
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 23 16 ]
+        %tmp.22 = self;
+        symbol [ loadResource %tmp.23 23 30 42 ];
+        %tmp.23 = getv function %tmp.22 :loadResource;
+        symbol [ Rez %tmp.25 23 43 46 ];
+        %tmp.25 = getv ? :Rez;
+        symbol [ Fonts %tmp.26 23 47 52 ];
+        %tmp.26 = getv %tmp.25 :Fonts;
+        symbol [ MilFont26Bold %tmp.27 23 53 66 ];
+        %tmp.27 = getv %tmp.26 :MilFont26Bold;
+        %tmp.28 = invoke %tmp.22 %tmp.23(%tmp.27);
+        putv self :_milfont26b %tmp.28;
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 12; @position = 16; @symbol_vardef = [_width,12,16,22]; @symbol_type<0> = [Number,12,27,33]; ]
+    private
+    var _width as Number = 0;
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 13; @position = 16; @symbol_vardef = [_height,13,16,23]; @symbol_type<0> = [Number,13,27,33]; ]
+    private
+    var _height as Number = 0;
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 14; @position = 16; @symbol_vardef = [_strBat,14,16,23]; @symbol_type<0> = [String,14,27,33]; ]
+    private
+    var _strBat as String = "R BAT";
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 16; @position = 16; @symbol_vardef = [_customFontLarge,16,16,32]; @symbol_type<0> = [Graphics,16,36,44]; @symbol_type<1> = [FontResource,16,45,57]; ]
+    private
+    var _customFontLarge as Graphics.FontResource or Null = null;
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 17; @position = 16; @symbol_vardef = [_customFontSmall,17,16,32]; @symbol_type<0> = [Graphics,17,36,44]; @symbol_type<1> = [FontResource,17,45,57]; ]
+    private
+    var _customFontSmall as Graphics.FontResource or Null = null;
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 20; @position = 16; @symbol_vardef = [_milfont16b,20,16,27]; ]
+    private
+    var _milfont16b;
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 21; @position = 16; @symbol_vardef = [_milfont15b,21,16,27]; ]
+    private
+    var _milfont15b;
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 22; @position = 16; @symbol_vardef = [_milfont34b,22,16,27]; ]
+    private
+    var _milfont34b;
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 23; @position = 16; @symbol_vardef = [_milfont26b,23,16,27]; ]
+    private
+    var _milfont26b;
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 25; @position = 16; @symbol_vardef = [_topBarBelly,25,16,28]; ]
+    private
+    var _topBarBelly = 0;
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 26; @position = 16; @symbol_vardef = [_bottomBarIcepick,26,16,33]; ]
+    private
+    var _bottomBarIcepick = 0;
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 28; @symbol_functiondef = [initialize,28,13,23]; ]
+    function initialize() as Void {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_28_26_28_52_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 28 28 ]
+        symbol [ WatchFace %tmp.2 28 28 37 ];
+        %tmp.2 = getv ? :WatchFace;
+        symbol [ initialize %tmp.3 28 38 48 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_28_26_28_52_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 30; @symbol_functiondef = [onLayout,30,13,21]; @symbol_param<0> = [dc,30,22,24]; @symbol_param<0>_type<0> = [Dc,30,28,30]; ]
+    function onLayout(dc as Dc) {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_30_32_35_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 31 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 31 18 20 ];
+        symbol [ getWidth %tmp.2 31 21 29 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        symbol [ _width ? 31 8 14 ];
+        putv self :_width %tmp.3;
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 32 8 ]
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 32 18 20 ];
+        symbol [ getHeight %tmp.5 32 21 30 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        symbol [ _height ? 32 8 15 ];
+        putv self :_height %tmp.6;
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 33 8 ]
+        symbol [ _height %tmp.8 33 23 30 ];
+        %tmp.8 = getv ? :_height;
+        %tmp.9 = 0.21428571428;
+        %tmp.10 = mul %tmp.8 %tmp.9;
+        symbol [ _topBarBelly ? 33 8 20 ];
+        putv self :_topBarBelly %tmp.10;
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 34 8 ]
+        symbol [ Math %tmp.12 34 28 32 ];
+        %tmp.12 = getv ? :Math;
+        symbol [ round %tmp.13 34 33 38 ];
+        %tmp.13 = getv function %tmp.12 :round;
+        symbol [ _height %tmp.15 34 39 46 ];
+        %tmp.15 = getv ? :_height;
+        %tmp.16 = 1.4;
+        %tmp.17 = div %tmp.15 %tmp.16;
+        %tmp.18 = invoke %tmp.12 %tmp.13(%tmp.17);
+        symbol [ _bottomBarIcepick ? 34 8 25 ];
+        putv self :_bottomBarIcepick %tmp.18;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_30_32_35_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 37; @symbol_functiondef = [onUpdate,37,13,21]; @symbol_param<0> = [dc,37,22,24]; @symbol_param<0>_type<0> = [Dc,37,28,30]; ]
+    function onUpdate(dc as Dc) {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_37_32_47_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 38 8 ]
+        %tmp.1 = self;
+        symbol [ _drawBackground %tmp.2 38 8 23 ];
+        %tmp.2 = getv function %tmp.1 :_drawBackground;
+        %tmp.3 = lgetv %dc;
+        symbol [ dc %tmp.3 38 24 26 ];
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 40 8 ]
+        %tmp.4 = self;
+        symbol [ _drawTopBar %tmp.5 40 8 19 ];
+        %tmp.5 = getv function %tmp.4 :_drawTopBar;
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 40 20 22 ];
+        invoke %tmp.4 %tmp.5(%tmp.6);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 41 8 ]
+        %tmp.7 = self;
+        symbol [ _drawPrimaryFreq %tmp.8 41 8 24 ];
+        %tmp.8 = getv function %tmp.7 :_drawPrimaryFreq;
+        %tmp.9 = lgetv %dc;
+        symbol [ dc %tmp.9 41 25 27 ];
+        invoke %tmp.7 %tmp.8(%tmp.9);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 42 8 ]
+        %tmp.10 = self;
+        symbol [ _drawSecondaryFreq %tmp.11 42 8 26 ];
+        %tmp.11 = getv function %tmp.10 :_drawSecondaryFreq;
+        %tmp.12 = lgetv %dc;
+        symbol [ dc %tmp.12 42 27 29 ];
+        invoke %tmp.10 %tmp.11(%tmp.12);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 43 8 ]
+        %tmp.13 = self;
+        symbol [ _drawBatteryBar %tmp.14 43 8 23 ];
+        %tmp.14 = getv function %tmp.13 :_drawBatteryBar;
+        %tmp.15 = lgetv %dc;
+        symbol [ dc %tmp.15 43 24 26 ];
+        invoke %tmp.13 %tmp.14(%tmp.15);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 44 8 ]
+        %tmp.16 = self;
+        symbol [ _drawCentralBar %tmp.17 44 8 23 ];
+        %tmp.17 = getv function %tmp.16 :_drawCentralBar;
+        %tmp.18 = lgetv %dc;
+        symbol [ dc %tmp.18 44 24 26 ];
+        invoke %tmp.16 %tmp.17(%tmp.18);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 45 8 ]
+        %tmp.19 = self;
+        symbol [ _drawBottomBar %tmp.20 45 8 22 ];
+        %tmp.20 = getv function %tmp.19 :_drawBottomBar;
+        %tmp.21 = lgetv %dc;
+        symbol [ dc %tmp.21 45 23 25 ];
+        invoke %tmp.19 %tmp.20(%tmp.21);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 46 8 ]
+        %tmp.22 = self;
+        symbol [ _drawRightPanel %tmp.23 46 8 23 ];
+        %tmp.23 = getv function %tmp.22 :_drawRightPanel;
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 46 24 26 ];
+        invoke %tmp.22 %tmp.23(%tmp.24);
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_37_32_47_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 51; @symbol_functiondef = [_drawBackground,51,21,36]; @symbol_param<0> = [dc,51,37,39]; @symbol_param<0>_type<0> = [Dc,51,43,45]; ]
+    private
+    function _drawBackground(dc as Dc) {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_51_47_57_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 53 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 53 8 10 ];
+        symbol [ setColor %tmp.2 53 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = 0x005500;
+        symbol [ Graphics %tmp.4 53 30 38 ];
+        %tmp.4 = getm $.Toybox.Graphics;
+        symbol [ COLOR_GREEN %tmp.5 53 39 50 ];
+        %tmp.5 = getv %tmp.4 :COLOR_GREEN;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 56 8 ]
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 56 8 10 ];
+        symbol [ clear %tmp.7 56 11 16 ];
+        %tmp.7 = getv function %tmp.6 :clear;
+        invoke %tmp.6 %tmp.7();
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_51_47_57_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 59; @symbol_functiondef = [_drawScanlines,59,21,35]; @symbol_param<0> = [dc,59,36,38]; @symbol_param<0>_type<0> = [Dc,59,42,44]; ]
+    private
+    function _drawScanlines(dc as Dc) {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_59_46_65_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 61 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 61 8 10 ];
+        symbol [ setColor %tmp.2 61 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = 0x005500;
+        symbol [ Graphics %tmp.4 61 30 38 ];
+        %tmp.4 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.5 61 39 56 ];
+        %tmp.5 = getv %tmp.4 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 62 8 ]
+        for @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_8_64_8_for_test @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_8_64_8_for_incr @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_8_64_8_for_end;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_8_64_8_for_init:
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_8_64_8_for_begin" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_8_64_8_for_end" ]
+        %y.1 = local;
+        symbol [ y %y.1 62 17 18 ];
+        %tmp.6 = 0;
+        lputv %y.1 %tmp.6;
+        symbol [ y %y.1 62 17 18 ];
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_8_64_8_for_test:
+        %tmp.7 = lgetv %y.1;
+        symbol [ y %tmp.7 62 24 25 ];
+        symbol [ _height %tmp.9 62 28 35 ];
+        %tmp.9 = getv ? :_height;
+        %tmp.10 = lt %tmp.7 %tmp.9;
+        bf %tmp.10 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_8_64_8_for_end;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_8_64_8_for_begin:
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_45_64_8_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 63 12 ]
+        %tmp.11 = lgetv %dc;
+        symbol [ dc %tmp.11 63 12 14 ];
+        symbol [ drawLine %tmp.12 63 15 23 ];
+        %tmp.12 = getv function %tmp.11 :drawLine;
+        %tmp.13 = 0;
+        %tmp.14 = lgetv %y.1;
+        symbol [ y %tmp.14 63 27 28 ];
+        symbol [ _width %tmp.16 63 30 36 ];
+        %tmp.16 = getv ? :_width;
+        %tmp.17 = lgetv %y.1;
+        symbol [ y %tmp.17 63 38 39 ];
+        invoke %tmp.11 %tmp.12(%tmp.13, %tmp.14, %tmp.16, %tmp.17);
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_45_64_8_stop:
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_8_64_8_for_incr:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 62 ]
+        %tmp.18 = lgetv %y.1;
+        symbol [ y %tmp.18 62 37 38 ];
+        %tmp.19 = 4;
+        %tmp.20 = add %tmp.18 %tmp.19;
+        lputv %y.1 %tmp.20;
+        symbol [ y %y.1 62 37 38 ];
+        goto @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_8_64_8_for_test;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_62_8_64_8_for_end:
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_59_46_65_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 67; @symbol_functiondef = [_drawTopBar,67,21,32]; @symbol_param<0> = [dc,67,33,35]; @symbol_param<0>_type<0> = [Dc,67,39,41]; ]
+    private
+    function _drawTopBar(dc as Dc) {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_67_43_79_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 69 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 69 8 10 ];
+        symbol [ setColor %tmp.2 69 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 69 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 69 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        symbol [ Graphics %tmp.5 69 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 69 51 68 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 70 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 70 8 10 ];
+        symbol [ drawText %tmp.8 70 11 19 ];
+        %tmp.8 = getv function %tmp.7 :drawText;
+        symbol [ _width %tmp.10 71 12 18 ];
+        %tmp.10 = getv ? :_width;
+        %tmp.11 = 2;
+        %tmp.12 = div %tmp.10 %tmp.11;
+        symbol [ _height %tmp.14 71 24 31 ];
+        %tmp.14 = getv ? :_height;
+        %tmp.15 = 0.125;
+        %tmp.16 = mul %tmp.14 %tmp.15;
+        symbol [ _milfont15b %tmp.18 72 12 23 ];
+        %tmp.18 = getv ? :_milfont15b;
+        %tmp.19 = "WIDEBAND NETWORKING";
+        symbol [ Graphics %tmp.20 74 12 20 ];
+        %tmp.20 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.21 74 21 40 ];
+        %tmp.21 = getv %tmp.20 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.7 %tmp.8(%tmp.12, %tmp.16, %tmp.18, %tmp.19, %tmp.21);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 78 8 ]
+        %tmp.22 = lgetv %dc;
+        symbol [ dc %tmp.22 78 8 10 ];
+        symbol [ drawLine %tmp.23 78 11 19 ];
+        %tmp.23 = getv function %tmp.22 :drawLine;
+        %tmp.24 = 0;
+        symbol [ _topBarBelly %tmp.26 78 23 35 ];
+        %tmp.26 = getv ? :_topBarBelly;
+        symbol [ _width %tmp.28 78 37 43 ];
+        %tmp.28 = getv ? :_width;
+        %tmp.29 = 1.037;
+        %tmp.30 = div %tmp.28 %tmp.29;
+        symbol [ _topBarBelly %tmp.32 78 53 65 ];
+        %tmp.32 = getv ? :_topBarBelly;
+        invoke %tmp.22 %tmp.23(%tmp.24, %tmp.26, %tmp.30, %tmp.32);
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_67_43_79_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 88; @symbol_functiondef = [_drawBatteryBar,88,21,36]; @symbol_param<0> = [dc,88,37,39]; @symbol_param<0>_type<0> = [Graphics,88,43,51]; @symbol_param<0>_type<1> = [Dc,88,52,54]; ]
+    private
+    function _drawBatteryBar(dc as Graphics.Dc) as Void {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_88_64_109_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 89 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_88_64_109_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_88_64_109_4_stop" ]
+        %bat.1 = local;
+        symbol [ bat %bat.1 89 12 15 ];
+        symbol [ DataManager %tmp.2 89 21 32 ];
+        %tmp.2 = getv ? :DataManager;
+        symbol [ getBattery %tmp.3 89 33 43 ];
+        %tmp.3 = getv function %tmp.2 :getBattery;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %bat.1 %tmp.4;
+        symbol [ bat %bat.1 89 12 15 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 90 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_88_64_109_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_88_64_109_4_stop" ]
+        %barW.2 = local;
+        symbol [ barW %barW.2 90 12 16 ];
+        symbol [ _width %tmp.6 90 21 27 ];
+        %tmp.6 = getv ? :_width;
+        %tmp.7 = 0.1964;
+        %tmp.8 = mul %tmp.6 %tmp.7;
+        lputv %barW.2 %tmp.8;
+        symbol [ barW %barW.2 90 12 16 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 91 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_88_64_109_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_88_64_109_4_stop" ]
+        %barH.3 = local;
+        symbol [ barH %barH.3 91 12 16 ];
+        symbol [ _height %tmp.10 91 21 28 ];
+        %tmp.10 = getv ? :_height;
+        %tmp.11 = 0.0321;
+        %tmp.12 = mul %tmp.10 %tmp.11;
+        lputv %barH.3 %tmp.12;
+        symbol [ barH %barH.3 91 12 16 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 92 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_88_64_109_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_88_64_109_4_stop" ]
+        %barX.4 = local;
+        symbol [ barX %barX.4 92 12 16 ];
+        symbol [ _width %tmp.14 92 21 27 ];
+        %tmp.14 = getv ? :_width;
+        %tmp.15 = 0.2429;
+        %tmp.16 = mul %tmp.14 %tmp.15;
+        lputv %barX.4 %tmp.16;
+        symbol [ barX %barX.4 92 12 16 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 93 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_88_64_109_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_88_64_109_4_stop" ]
+        %filled.5 = local;
+        symbol [ filled %filled.5 93 12 18 ];
+        %tmp.17 = lgetv %bat.1;
+        symbol [ bat %tmp.17 93 22 25 ];
+        %tmp.18 = 100.0;
+        %tmp.19 = div %tmp.17 %tmp.18;
+        %tmp.20 = lgetv %barW.2;
+        symbol [ barW %tmp.20 93 36 40 ];
+        %tmp.21 = mul %tmp.19 %tmp.20;
+        symbol [ toNumber %tmp.22 93 42 50 ];
+        %tmp.22 = getv function %tmp.21 :toNumber;
+        %tmp.23 = invoke %tmp.21 %tmp.22();
+        lputv %filled.5 %tmp.23;
+        symbol [ filled %filled.5 93 12 18 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 95 8 ]
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 95 8 10 ];
+        symbol [ setColor %tmp.25 95 11 19 ];
+        %tmp.25 = getv function %tmp.24 :setColor;
+        symbol [ Graphics %tmp.26 95 20 28 ];
+        %tmp.26 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.27 95 29 40 ];
+        %tmp.27 = getv %tmp.26 :COLOR_BLACK;
+        symbol [ Graphics %tmp.28 95 42 50 ];
+        %tmp.28 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.29 95 51 68 ];
+        %tmp.29 = getv %tmp.28 :COLOR_TRANSPARENT;
+        invoke %tmp.24 %tmp.25(%tmp.27, %tmp.29);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 96 8 ]
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 96 8 10 ];
+        symbol [ setPenWidth %tmp.31 96 11 22 ];
+        %tmp.31 = getv function %tmp.30 :setPenWidth;
+        %tmp.32 = 1;
+        invoke %tmp.30 %tmp.31(%tmp.32);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 99 8 ]
+        %tmp.33 = lgetv %dc;
+        symbol [ dc %tmp.33 99 8 10 ];
+        symbol [ drawText %tmp.34 99 11 19 ];
+        %tmp.34 = getv function %tmp.33 :drawText;
+        symbol [ _width %tmp.36 99 20 26 ];
+        %tmp.36 = getv ? :_width;
+        %tmp.37 = 0.0821;
+        %tmp.38 = mul %tmp.36 %tmp.37;
+        symbol [ _topBarBelly %tmp.40 99 37 49 ];
+        %tmp.40 = getv ? :_topBarBelly;
+        symbol [ _milfont15b %tmp.42 99 51 62 ];
+        %tmp.42 = getv ? :_milfont15b;
+        symbol [ _strBat %tmp.44 99 64 71 ];
+        %tmp.44 = getv ? :_strBat;
+        symbol [ Graphics %tmp.45 99 73 81 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.46 99 82 99 ];
+        %tmp.46 = getv %tmp.45 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.33 %tmp.34(%tmp.38, %tmp.40, %tmp.42, %tmp.44, %tmp.46);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 102 8 ]
+        %tmp.47 = lgetv %dc;
+        symbol [ dc %tmp.47 102 8 10 ];
+        symbol [ drawRectangle %tmp.48 102 11 24 ];
+        %tmp.48 = getv function %tmp.47 :drawRectangle;
+        %tmp.49 = lgetv %barX.4;
+        symbol [ barX %tmp.49 102 25 29 ];
+        symbol [ _topBarBelly %tmp.51 102 31 43 ];
+        %tmp.51 = getv ? :_topBarBelly;
+        symbol [ _width %tmp.53 102 47 53 ];
+        %tmp.53 = getv ? :_width;
+        %tmp.54 = 0.0179;
+        %tmp.55 = mul %tmp.53 %tmp.54;
+        %tmp.56 = add %tmp.51 %tmp.55;
+        %tmp.57 = lgetv %barW.2;
+        symbol [ barW %tmp.57 102 65 69 ];
+        %tmp.58 = lgetv %barH.3;
+        symbol [ barH %tmp.58 102 71 75 ];
+        invoke %tmp.47 %tmp.48(%tmp.49, %tmp.56, %tmp.57, %tmp.58);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 105 8 ]
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_105_8_108_8_if_stmt:
+        %tmp.59 = lgetv %filled.5;
+        symbol [ filled %tmp.59 105 12 18 ];
+        %tmp.60 = 2;
+        %tmp.61 = gt %tmp.59 %tmp.60;
+        bf %tmp.61 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_105_8_108_8_if_end;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_105_8_108_8_if_true:
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_105_24_108_8_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 106 12 ]
+        %tmp.62 = lgetv %dc;
+        symbol [ dc %tmp.62 106 12 14 ];
+        symbol [ setColor %tmp.63 106 15 23 ];
+        %tmp.63 = getv function %tmp.62 :setColor;
+        symbol [ Graphics %tmp.64 106 24 32 ];
+        %tmp.64 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.65 106 33 44 ];
+        %tmp.65 = getv %tmp.64 :COLOR_BLACK;
+        symbol [ Graphics %tmp.66 106 46 54 ];
+        %tmp.66 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.67 106 55 66 ];
+        %tmp.67 = getv %tmp.66 :COLOR_BLACK;
+        invoke %tmp.62 %tmp.63(%tmp.65, %tmp.67);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 107 12 ]
+        %tmp.68 = lgetv %dc;
+        symbol [ dc %tmp.68 107 12 14 ];
+        symbol [ fillRectangle %tmp.69 107 15 28 ];
+        %tmp.69 = getv function %tmp.68 :fillRectangle;
+        %tmp.70 = lgetv %barX.4;
+        symbol [ barX %tmp.70 107 29 33 ];
+        %tmp.71 = 1;
+        %tmp.72 = add %tmp.70 %tmp.71;
+        symbol [ _topBarBelly %tmp.74 107 39 51 ];
+        %tmp.74 = getv ? :_topBarBelly;
+        symbol [ _width %tmp.76 107 55 61 ];
+        %tmp.76 = getv ? :_width;
+        %tmp.77 = 46.6666;
+        %tmp.78 = div %tmp.76 %tmp.77;
+        %tmp.79 = add %tmp.74 %tmp.78;
+        %tmp.80 = lgetv %filled.5;
+        symbol [ filled %tmp.80 107 74 80 ];
+        %tmp.81 = 2;
+        %tmp.82 = sub %tmp.80 %tmp.81;
+        %tmp.83 = lgetv %barH.3;
+        symbol [ barH %tmp.83 107 86 90 ];
+        %tmp.84 = 2;
+        %tmp.85 = sub %tmp.83 %tmp.84;
+        invoke %tmp.68 %tmp.69(%tmp.72, %tmp.79, %tmp.82, %tmp.85);
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_105_24_108_8_stop:
+        goto @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_105_8_108_8_if_end;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_105_8_108_8_if_end:
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_88_64_109_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 111; @symbol_functiondef = [_drawRightPanel,111,21,36]; @symbol_param<0> = [dc,111,37,39]; @symbol_param<0>_type<0> = [Dc,111,43,45]; ]
+    private
+    function _drawRightPanel(dc as Dc) {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_111_47_117_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 112 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_111_47_117_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_111_47_117_4_stop" ]
+        %steps.1 = local;
+        symbol [ steps %steps.1 112 12 17 ];
+        %tmp.1 = "019800";
+        lputv %steps.1 %tmp.1;
+        symbol [ steps %steps.1 112 12 17 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 113 8 ]
+        %tmp.2 = lgetv %dc;
+        symbol [ dc %tmp.2 113 8 10 ];
+        symbol [ setColor %tmp.3 113 11 19 ];
+        %tmp.3 = getv function %tmp.2 :setColor;
+        symbol [ Graphics %tmp.4 113 20 28 ];
+        %tmp.4 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.5 113 29 40 ];
+        %tmp.5 = getv %tmp.4 :COLOR_BLACK;
+        symbol [ Graphics %tmp.6 113 42 50 ];
+        %tmp.6 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.7 113 51 68 ];
+        %tmp.7 = getv %tmp.6 :COLOR_TRANSPARENT;
+        invoke %tmp.2 %tmp.3(%tmp.5, %tmp.7);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 114 8 ]
+        %tmp.8 = lgetv %dc;
+        symbol [ dc %tmp.8 114 8 10 ];
+        symbol [ drawText %tmp.9 114 11 19 ];
+        %tmp.9 = getv function %tmp.8 :drawText;
+        symbol [ _width %tmp.11 114 20 26 ];
+        %tmp.11 = getv ? :_width;
+        %tmp.12 = 0.9107;
+        %tmp.13 = mul %tmp.11 %tmp.12;
+        symbol [ _topBarBelly %tmp.15 114 37 49 ];
+        %tmp.15 = getv ? :_topBarBelly;
+        symbol [ _milfont15b %tmp.17 114 51 62 ];
+        %tmp.17 = getv ? :_milfont15b;
+        symbol [ Lang %tmp.18 115 20 24 ];
+        %tmp.18 = getm $.Toybox.Lang;
+        symbol [ format %tmp.19 115 25 31 ];
+        %tmp.19 = getv function %tmp.18 :format;
+        %tmp.20 = "GSC $1$";
+        %tmp.21 = newa 1;
+        %tmp.22 = lgetv %steps.1;
+        symbol [ steps %tmp.22 115 44 49 ];
+        %tmp.23 = dup %tmp.21;
+        %tmp.24 = aputv %tmp.23 0 %tmp.22;
+        %tmp.25 = invoke %tmp.18 %tmp.19(%tmp.20, %tmp.24);
+        symbol [ Graphics %tmp.26 116 20 28 ];
+        %tmp.26 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_RIGHT %tmp.27 116 29 47 ];
+        %tmp.27 = getv %tmp.26 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.8 %tmp.9(%tmp.13, %tmp.15, %tmp.17, %tmp.25, %tmp.27);
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_111_47_117_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 119; @symbol_functiondef = [_drawPrimaryFreq,119,21,37]; @symbol_param<0> = [dc,119,38,40]; @symbol_param<0>_type<0> = [Dc,119,44,46]; ]
+    private
+    function _drawPrimaryFreq(dc as Dc) {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_119_48_130_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 121 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_119_48_130_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_119_48_130_4_stop" ]
+        %t.1 = local;
+        symbol [ t %t.1 121 12 13 ];
+        symbol [ System %tmp.1 121 16 22 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.2 121 23 35 ];
+        %tmp.2 = getv function %tmp.1 :getClockTime;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %t.1 %tmp.3;
+        symbol [ t %t.1 121 12 13 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 123 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_119_48_130_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_119_48_130_4_stop" ]
+        %timeStr.2 = local;
+        symbol [ timeStr %timeStr.2 123 12 19 ];
+        symbol [ Lang %tmp.4 123 22 26 ];
+        %tmp.4 = getm $.Toybox.Lang;
+        symbol [ format %tmp.5 123 27 33 ];
+        %tmp.5 = getv function %tmp.4 :format;
+        %tmp.6 = ">T1:$1$.$2$.000";
+        %tmp.7 = newa 2;
+        %tmp.8 = lgetv %t.1;
+        symbol [ t %tmp.8 124 12 13 ];
+        symbol [ hour %tmp.9 124 14 18 ];
+        %tmp.9 = getv %tmp.8 :hour;
+        symbol [ format %tmp.10 124 19 25 ];
+        %tmp.10 = getv function %tmp.9 :format;
+        %tmp.11 = "%02d";
+        %tmp.12 = invoke %tmp.9 %tmp.10(%tmp.11);
+        %tmp.13 = dup %tmp.7;
+        %tmp.14 = aputv %tmp.13 0 %tmp.12;
+        %tmp.15 = lgetv %t.1;
+        symbol [ t %tmp.15 125 12 13 ];
+        symbol [ min %tmp.16 125 14 17 ];
+        %tmp.16 = getv %tmp.15 :min;
+        symbol [ format %tmp.17 125 18 24 ];
+        %tmp.17 = getv function %tmp.16 :format;
+        %tmp.18 = "%02d";
+        %tmp.19 = invoke %tmp.16 %tmp.17(%tmp.18);
+        %tmp.20 = dup %tmp.14;
+        %tmp.21 = aputv %tmp.20 1 %tmp.19;
+        %tmp.22 = invoke %tmp.4 %tmp.5(%tmp.6, %tmp.21);
+        lputv %timeStr.2 %tmp.22;
+        symbol [ timeStr %timeStr.2 123 12 19 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 127 8 ]
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 127 8 10 ];
+        symbol [ setColor %tmp.24 127 11 19 ];
+        %tmp.24 = getv function %tmp.23 :setColor;
+        symbol [ Graphics %tmp.25 127 20 28 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.26 127 29 40 ];
+        %tmp.26 = getv %tmp.25 :COLOR_BLACK;
+        symbol [ Graphics %tmp.27 127 42 50 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.28 127 51 68 ];
+        %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+        invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 128 8 ]
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 128 8 10 ];
+        symbol [ drawText %tmp.30 128 11 19 ];
+        %tmp.30 = getv function %tmp.29 :drawText;
+        symbol [ _width %tmp.32 128 20 26 ];
+        %tmp.32 = getv ? :_width;
+        %tmp.33 = 14;
+        %tmp.34 = div %tmp.32 %tmp.33;
+        symbol [ _height %tmp.36 128 33 40 ];
+        %tmp.36 = getv ? :_height;
+        %tmp.37 = 0.3214;
+        %tmp.38 = mul %tmp.36 %tmp.37;
+        symbol [ _milfont34b %tmp.40 128 51 62 ];
+        %tmp.40 = getv ? :_milfont34b;
+        %tmp.41 = lgetv %timeStr.2;
+        symbol [ timeStr %tmp.41 128 64 71 ];
+        symbol [ Graphics %tmp.42 129 20 28 ];
+        %tmp.42 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.43 129 29 46 ];
+        %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.29 %tmp.30(%tmp.34, %tmp.38, %tmp.40, %tmp.41, %tmp.43);
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_119_48_130_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 132; @symbol_functiondef = [_drawSecondaryFreq,132,21,39]; @symbol_param<0> = [dc,132,40,42]; @symbol_param<0>_type<0> = [Dc,132,46,48]; ]
+    private
+    function _drawSecondaryFreq(dc as Dc) {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_132_50_142_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 133 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_132_50_142_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_132_50_142_4_stop" ]
+        %utcTime.1 = local;
+        symbol [ utcTime %utcTime.1 133 12 19 ];
+        symbol [ DataManager %tmp.2 133 22 33 ];
+        %tmp.2 = getv ? :DataManager;
+        symbol [ getUtcTime %tmp.3 133 34 44 ];
+        %tmp.3 = getv function %tmp.2 :getUtcTime;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %utcTime.1 %tmp.4;
+        symbol [ utcTime %utcTime.1 133 12 19 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 135 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_132_50_142_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_132_50_142_4_stop" ]
+        %utc.2 = local;
+        symbol [ utc %utc.2 135 12 15 ];
+        symbol [ Lang %tmp.5 135 18 22 ];
+        %tmp.5 = getm $.Toybox.Lang;
+        symbol [ format %tmp.6 135 23 29 ];
+        %tmp.6 = getv function %tmp.5 :format;
+        %tmp.7 = "T2:$1$.$2$.00";
+        %tmp.8 = newa 2;
+        %tmp.9 = lgetv %utcTime.1;
+        symbol [ utcTime %tmp.9 136 12 19 ];
+        symbol [ hour %tmp.10 136 20 24 ];
+        %tmp.10 = getv %tmp.9 :hour;
+        symbol [ format %tmp.11 136 25 31 ];
+        %tmp.11 = getv function %tmp.10 :format;
+        %tmp.12 = "%02d";
+        %tmp.13 = invoke %tmp.10 %tmp.11(%tmp.12);
+        %tmp.14 = dup %tmp.8;
+        %tmp.15 = aputv %tmp.14 0 %tmp.13;
+        %tmp.16 = lgetv %utcTime.1;
+        symbol [ utcTime %tmp.16 137 12 19 ];
+        symbol [ min %tmp.17 137 20 23 ];
+        %tmp.17 = getv %tmp.16 :min;
+        symbol [ format %tmp.18 137 24 30 ];
+        %tmp.18 = getv function %tmp.17 :format;
+        %tmp.19 = "%02d";
+        %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
+        %tmp.21 = dup %tmp.15;
+        %tmp.22 = aputv %tmp.21 1 %tmp.20;
+        %tmp.23 = invoke %tmp.5 %tmp.6(%tmp.7, %tmp.22);
+        lputv %utc.2 %tmp.23;
+        symbol [ utc %utc.2 135 12 15 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 139 8 ]
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 139 8 10 ];
+        symbol [ setColor %tmp.25 139 11 19 ];
+        %tmp.25 = getv function %tmp.24 :setColor;
+        symbol [ Graphics %tmp.26 139 20 28 ];
+        %tmp.26 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.27 139 29 40 ];
+        %tmp.27 = getv %tmp.26 :COLOR_BLACK;
+        symbol [ Graphics %tmp.28 139 42 50 ];
+        %tmp.28 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.29 139 51 68 ];
+        %tmp.29 = getv %tmp.28 :COLOR_TRANSPARENT;
+        invoke %tmp.24 %tmp.25(%tmp.27, %tmp.29);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 140 8 ]
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 140 8 10 ];
+        symbol [ drawText %tmp.31 140 11 19 ];
+        %tmp.31 = getv function %tmp.30 :drawText;
+        symbol [ _width %tmp.33 140 20 26 ];
+        %tmp.33 = getv ? :_width;
+        %tmp.34 = 14;
+        %tmp.35 = div %tmp.33 %tmp.34;
+        symbol [ _height %tmp.37 140 33 40 ];
+        %tmp.37 = getv ? :_height;
+        %tmp.38 = 0.4643;
+        %tmp.39 = mul %tmp.37 %tmp.38;
+        symbol [ _milfont26b %tmp.41 140 51 62 ];
+        %tmp.41 = getv ? :_milfont26b;
+        %tmp.42 = lgetv %utc.2;
+        symbol [ utc %tmp.42 140 64 67 ];
+        symbol [ Graphics %tmp.43 141 20 28 ];
+        %tmp.43 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.44 141 29 46 ];
+        %tmp.44 = getv %tmp.43 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.30 %tmp.31(%tmp.35, %tmp.39, %tmp.41, %tmp.42, %tmp.44);
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_132_50_142_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 144; @symbol_functiondef = [_drawCentralBar,144,21,36]; @symbol_param<0> = [dc,144,37,39]; @symbol_param<0>_type<0> = [Dc,144,43,45]; ]
+    private
+    function _drawCentralBar(dc as Dc) {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_144_47_155_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 145 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_144_47_155_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_144_47_155_4_stop" ]
+        %steps.1 = local;
+        symbol [ steps %steps.1 145 12 17 ];
+        symbol [ DataManager %tmp.2 145 20 31 ];
+        %tmp.2 = getv ? :DataManager;
+        symbol [ getSteps %tmp.3 145 32 40 ];
+        %tmp.3 = getv function %tmp.2 :getSteps;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %steps.1 %tmp.4;
+        symbol [ steps %steps.1 145 12 17 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 146 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_144_47_155_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_144_47_155_4_stop" ]
+        %today.2 = local;
+        symbol [ today %today.2 146 12 17 ];
+        symbol [ Gregorian %tmp.5 146 20 29 ];
+        %tmp.5 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.6 146 30 34 ];
+        %tmp.6 = getv function %tmp.5 :info;
+        symbol [ Time %tmp.7 146 35 39 ];
+        %tmp.7 = getm $.Toybox.Time;
+        symbol [ now %tmp.8 146 40 43 ];
+        %tmp.8 = getv function %tmp.7 :now;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        symbol [ Time %tmp.10 146 47 51 ];
+        %tmp.10 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.11 146 52 64 ];
+        %tmp.11 = getv %tmp.10 :FORMAT_SHORT;
+        %tmp.12 = invoke %tmp.5 %tmp.6(%tmp.9, %tmp.11);
+        lputv %today.2 %tmp.12;
+        symbol [ today %today.2 146 12 17 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 147 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_144_47_155_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_144_47_155_4_stop" ]
+        %dayStr.3 = local;
+        symbol [ dayStr %dayStr.3 147 12 18 ];
+        symbol [ Lang %tmp.13 147 21 25 ];
+        %tmp.13 = getm $.Toybox.Lang;
+        symbol [ format %tmp.14 147 26 32 ];
+        %tmp.14 = getv function %tmp.13 :format;
+        %tmp.15 = "TYPE M $1$/$2$";
+        %tmp.16 = newa 2;
+        %tmp.17 = lgetv %today.2;
+        symbol [ today %tmp.17 148 12 17 ];
+        symbol [ day %tmp.18 148 18 21 ];
+        %tmp.18 = getv %tmp.17 :day;
+        %tmp.19 = dup %tmp.16;
+        %tmp.20 = aputv %tmp.19 0 %tmp.18;
+        %tmp.21 = lgetv %today.2;
+        symbol [ today %tmp.21 148 23 28 ];
+        symbol [ month %tmp.22 148 29 34 ];
+        %tmp.22 = getv %tmp.21 :month;
+        %tmp.23 = dup %tmp.20;
+        %tmp.24 = aputv %tmp.23 1 %tmp.22;
+        %tmp.25 = invoke %tmp.13 %tmp.14(%tmp.15, %tmp.24);
+        lputv %dayStr.3 %tmp.25;
+        symbol [ dayStr %dayStr.3 147 12 18 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 150 8 ]
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 150 8 10 ];
+        symbol [ setColor %tmp.27 150 11 19 ];
+        %tmp.27 = getv function %tmp.26 :setColor;
+        symbol [ Graphics %tmp.28 150 20 28 ];
+        %tmp.28 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.29 150 29 40 ];
+        %tmp.29 = getv %tmp.28 :COLOR_BLACK;
+        symbol [ Graphics %tmp.30 150 42 50 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.31 150 51 68 ];
+        %tmp.31 = getv %tmp.30 :COLOR_TRANSPARENT;
+        invoke %tmp.26 %tmp.27(%tmp.29, %tmp.31);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 151 8 ]
+        %tmp.32 = lgetv %dc;
+        symbol [ dc %tmp.32 151 8 10 ];
+        symbol [ drawText %tmp.33 151 11 19 ];
+        %tmp.33 = getv function %tmp.32 :drawText;
+        symbol [ _width %tmp.35 151 20 26 ];
+        %tmp.35 = getv ? :_width;
+        %tmp.36 = 4;
+        %tmp.37 = div %tmp.35 %tmp.36;
+        symbol [ _height %tmp.39 151 32 39 ];
+        %tmp.39 = getv ? :_height;
+        %tmp.40 = 0.65;
+        %tmp.41 = mul %tmp.39 %tmp.40;
+        symbol [ _milfont16b %tmp.43 151 48 59 ];
+        %tmp.43 = getv ? :_milfont16b;
+        %tmp.44 = lgetv %dayStr.3;
+        symbol [ dayStr %tmp.44 151 61 67 ];
+        symbol [ Graphics %tmp.45 152 20 28 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.46 152 29 48 ];
+        %tmp.46 = getv %tmp.45 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.32 %tmp.33(%tmp.37, %tmp.41, %tmp.43, %tmp.44, %tmp.46);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 153 8 ]
+        %tmp.47 = lgetv %dc;
+        symbol [ dc %tmp.47 153 8 10 ];
+        symbol [ drawText %tmp.48 153 11 19 ];
+        %tmp.48 = getv function %tmp.47 :drawText;
+        symbol [ _width %tmp.50 153 21 27 ];
+        %tmp.50 = getv ? :_width;
+        %tmp.51 = 4;
+        %tmp.52 = div %tmp.50 %tmp.51;
+        %tmp.53 = 3;
+        %tmp.54 = mul %tmp.52 %tmp.53;
+        symbol [ _height %tmp.56 153 38 45 ];
+        %tmp.56 = getv ? :_height;
+        %tmp.57 = 0.65;
+        %tmp.58 = mul %tmp.56 %tmp.57;
+        symbol [ _milfont16b %tmp.60 153 54 65 ];
+        %tmp.60 = getv ? :_milfont16b;
+        %tmp.61 = "MSG 0001";
+        symbol [ Graphics %tmp.62 154 20 28 ];
+        %tmp.62 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.63 154 29 48 ];
+        %tmp.63 = getv %tmp.62 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.47 %tmp.48(%tmp.54, %tmp.58, %tmp.60, %tmp.61, %tmp.63);
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_144_47_155_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 156; @symbol_functiondef = [_drawBottomBar,156,21,35]; @symbol_param<0> = [dc,156,36,38]; @symbol_param<0>_type<0> = [Dc,156,42,44]; ]
+    private
+    function _drawBottomBar(dc as Dc) {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_156_46_166_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 157 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_156_46_166_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_156_46_166_4_stop" ]
+        %steps.1 = local;
+        symbol [ steps %steps.1 157 12 17 ];
+        symbol [ DataManager %tmp.2 157 20 31 ];
+        %tmp.2 = getv ? :DataManager;
+        symbol [ getSteps %tmp.3 157 32 40 ];
+        %tmp.3 = getv function %tmp.2 :getSteps;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        lputv %steps.1 %tmp.4;
+        symbol [ steps %steps.1 157 12 17 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 158 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_156_46_166_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_156_46_166_4_stop" ]
+        %today.2 = local;
+        symbol [ today %today.2 158 12 17 ];
+        symbol [ Gregorian %tmp.5 158 20 29 ];
+        %tmp.5 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.6 158 30 34 ];
+        %tmp.6 = getv function %tmp.5 :info;
+        symbol [ Time %tmp.7 158 35 39 ];
+        %tmp.7 = getm $.Toybox.Time;
+        symbol [ now %tmp.8 158 40 43 ];
+        %tmp.8 = getv function %tmp.7 :now;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        symbol [ Time %tmp.10 158 47 51 ];
+        %tmp.10 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.11 158 52 64 ];
+        %tmp.11 = getv %tmp.10 :FORMAT_SHORT;
+        %tmp.12 = invoke %tmp.5 %tmp.6(%tmp.9, %tmp.11);
+        lputv %today.2 %tmp.12;
+        symbol [ today %today.2 158 12 17 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 162 8 ]
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 162 8 10 ];
+        symbol [ setColor %tmp.14 162 11 19 ];
+        %tmp.14 = getv function %tmp.13 :setColor;
+        symbol [ Graphics %tmp.15 162 20 28 ];
+        %tmp.15 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.16 162 29 40 ];
+        %tmp.16 = getv %tmp.15 :COLOR_BLACK;
+        symbol [ Graphics %tmp.17 162 42 50 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.18 162 51 68 ];
+        %tmp.18 = getv %tmp.17 :COLOR_TRANSPARENT;
+        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" 163 8 ]
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 163 8 10 ];
+        symbol [ drawLine %tmp.20 163 11 19 ];
+        %tmp.20 = getv function %tmp.19 :drawLine;
+        symbol [ _width %tmp.22 163 20 26 ];
+        %tmp.22 = getv ? :_width;
+        %tmp.23 = 28;
+        %tmp.24 = div %tmp.22 %tmp.23;
+        symbol [ _bottomBarIcepick %tmp.26 163 33 50 ];
+        %tmp.26 = getv ? :_bottomBarIcepick;
+        symbol [ Math %tmp.28 163 52 56 ];
+        %tmp.28 = getv ? :Math;
+        symbol [ round %tmp.29 163 57 62 ];
+        %tmp.29 = getv function %tmp.28 :round;
+        symbol [ _width %tmp.31 163 63 69 ];
+        %tmp.31 = getv ? :_width;
+        %tmp.32 = 0.9643;
+        %tmp.33 = mul %tmp.31 %tmp.32;
+        %tmp.34 = invoke %tmp.28 %tmp.29(%tmp.33);
+        symbol [ _height %tmp.36 163 81 88 ];
+        %tmp.36 = getv ? :_height;
+        %tmp.37 = 1.4;
+        %tmp.38 = div %tmp.36 %tmp.37;
+        invoke %tmp.19 %tmp.20(%tmp.24, %tmp.26, %tmp.34, %tmp.38);
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_PRC_152watchfaceView_mc_156_46_166_4_stop:
+    }
+}
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc"; @line = 2; ]
+<init> {
+}

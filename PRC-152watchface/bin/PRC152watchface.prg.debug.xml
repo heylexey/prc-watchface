@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<manifest filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/manifest.xml"/>
+<pcToLineNum>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceApp.mc" id="1" lineNum="26" parent="globals" pc="268435460" symbol="getApp"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceApp.mc" id="1" lineNum="27" parent="globals" pc="268435470" symbol="getApp"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/bin/gen/006-B3907-00/source/Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435481" symbol="&lt;init&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceApp.mc" id="3" lineNum="5" parent="globals/PRC_152watchfaceApp" pc="268435501" symbol="&lt;init&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="4" lineNum="9" parent="globals/Prc152View" pc="268435513" symbol="&lt;init&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="4" lineNum="20" parent="globals/Prc152View" pc="268435524" symbol="&lt;init&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="4" lineNum="21" parent="globals/Prc152View" pc="268435558" symbol="&lt;init&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="4" lineNum="22" parent="globals/Prc152View" pc="268435592" symbol="&lt;init&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="4" lineNum="23" parent="globals/Prc152View" pc="268435626" symbol="&lt;init&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="5" lineNum="53" parent="globals/DataManager" pc="268435661" symbol="getDateString"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="5" lineNum="54" parent="globals/DataManager" pc="268435664" symbol="getDateString"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="5" lineNum="55" parent="globals/DataManager" pc="268435676" symbol="getDateString"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="5" lineNum="56" parent="globals/DataManager" pc="268435693" symbol="getDateString"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="6" lineNum="48" parent="globals/DataManager" pc="268435759" symbol="getNotifications"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="6" lineNum="49" parent="globals/DataManager" pc="268435761" symbol="getNotifications"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="7" lineNum="71" parent="globals/DataManager" pc="268435777" symbol="getUtcTime"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="7" lineNum="73" parent="globals/DataManager" pc="268435780" symbol="getUtcTime"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="7" lineNum="74" parent="globals/DataManager" pc="268435806" symbol="getUtcTime"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="8" lineNum="12" parent="globals/DataManager" pc="268435809" symbol="getBattery"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="8" lineNum="13" parent="globals/DataManager" pc="268435811" symbol="getBattery"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="9" lineNum="26" parent="globals/DataManager" pc="268435827" symbol="getSteps"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="9" lineNum="31" parent="globals/DataManager" pc="268435829" symbol="getSteps"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="11" lineNum="17" parent="globals/DataManager" pc="268435831" symbol="getHeartRate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="11" lineNum="18" parent="globals/DataManager" pc="268435834" symbol="getHeartRate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="11" lineNum="19" parent="globals/DataManager" pc="268435846" symbol="getHeartRate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="11" lineNum="20" parent="globals/DataManager" pc="268435863" symbol="getHeartRate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="11" lineNum="22" parent="globals/DataManager" pc="268435887" symbol="getHeartRate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="12" lineNum="35" parent="globals/DataManager" pc="268435893" symbol="getGpsStatus"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="12" lineNum="37" parent="globals/DataManager" pc="268435896" symbol="getGpsStatus"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="12" lineNum="38" parent="globals/DataManager" pc="268435908" symbol="getGpsStatus"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="12" lineNum="39" parent="globals/DataManager" pc="268435927" symbol="getGpsStatus"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="12" lineNum="41" parent="globals/DataManager" pc="268435945" symbol="getGpsStatus"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" id="12" lineNum="44" parent="globals/DataManager" pc="268435976" symbol="getGpsStatus"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceApp.mc" id="13" lineNum="12" parent="globals/PRC_152watchfaceApp" pc="268435982" symbol="onStart"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceApp.mc" id="14" lineNum="20" parent="globals/PRC_152watchfaceApp" pc="268435985" symbol="getInitialView"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceApp.mc" id="14" lineNum="21" parent="globals/PRC_152watchfaceApp" pc="268435987" symbol="getInitialView"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceApp.mc" id="15" lineNum="7" parent="globals/PRC_152watchfaceApp" pc="268436013" symbol="initialize"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceApp.mc" id="15" lineNum="8" parent="globals/PRC_152watchfaceApp" pc="268436015" symbol="initialize"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceApp.mc" id="16" lineNum="16" parent="globals/PRC_152watchfaceApp" pc="268436028" symbol="onStop"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="17" lineNum="51" parent="globals/Prc152View" pc="268436031" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBackground&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="17" lineNum="53" parent="globals/Prc152View" pc="268436033" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBackground&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="17" lineNum="56" parent="globals/Prc152View" pc="268436050" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBackground&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="18" lineNum="59" parent="globals/Prc152View" pc="268436059" symbol="&lt;globals/Prc152View/&lt;&gt;_drawScanlines&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="18" lineNum="61" parent="globals/Prc152View" pc="268436062" symbol="&lt;globals/Prc152View/&lt;&gt;_drawScanlines&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="18" lineNum="62" parent="globals/Prc152View" pc="268436077" symbol="&lt;globals/Prc152View/&lt;&gt;_drawScanlines&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="18" lineNum="63" parent="globals/Prc152View" pc="268436091" symbol="&lt;globals/Prc152View/&lt;&gt;_drawScanlines&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="19" lineNum="144" parent="globals/Prc152View" pc="268436122" symbol="&lt;globals/Prc152View/&lt;&gt;_drawCentralBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="19" lineNum="145" parent="globals/Prc152View" pc="268436125" symbol="&lt;globals/Prc152View/&lt;&gt;_drawCentralBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="19" lineNum="146" parent="globals/Prc152View" pc="268436138" symbol="&lt;globals/Prc152View/&lt;&gt;_drawCentralBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="19" lineNum="147" parent="globals/Prc152View" pc="268436163" symbol="&lt;globals/Prc152View/&lt;&gt;_drawCentralBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="19" lineNum="150" parent="globals/Prc152View" pc="268436204" symbol="&lt;globals/Prc152View/&lt;&gt;_drawCentralBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="19" lineNum="151" parent="globals/Prc152View" pc="268436217" symbol="&lt;globals/Prc152View/&lt;&gt;_drawCentralBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="19" lineNum="153" parent="globals/Prc152View" pc="268436255" symbol="&lt;globals/Prc152View/&lt;&gt;_drawCentralBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="20" lineNum="30" parent="globals/Prc152View" pc="268436300" symbol="onLayout"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="20" lineNum="31" parent="globals/Prc152View" pc="268436302" symbol="onLayout"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="20" lineNum="32" parent="globals/Prc152View" pc="268436316" symbol="onLayout"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="20" lineNum="33" parent="globals/Prc152View" pc="268436330" symbol="onLayout"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="20" lineNum="34" parent="globals/Prc152View" pc="268436348" symbol="onLayout"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="21" lineNum="67" parent="globals/Prc152View" pc="268436379" symbol="&lt;globals/Prc152View/&lt;&gt;_drawTopBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="21" lineNum="69" parent="globals/Prc152View" pc="268436381" symbol="&lt;globals/Prc152View/&lt;&gt;_drawTopBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="21" lineNum="70" parent="globals/Prc152View" pc="268436394" symbol="&lt;globals/Prc152View/&lt;&gt;_drawTopBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="21" lineNum="78" parent="globals/Prc152View" pc="268436435" symbol="&lt;globals/Prc152View/&lt;&gt;_drawTopBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="22" lineNum="111" parent="globals/Prc152View" pc="268436468" symbol="&lt;globals/Prc152View/&lt;&gt;_drawRightPanel&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="22" lineNum="112" parent="globals/Prc152View" pc="268436471" symbol="&lt;globals/Prc152View/&lt;&gt;_drawRightPanel&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="22" lineNum="113" parent="globals/Prc152View" pc="268436478" symbol="&lt;globals/Prc152View/&lt;&gt;_drawRightPanel&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="22" lineNum="114" parent="globals/Prc152View" pc="268436491" symbol="&lt;globals/Prc152View/&lt;&gt;_drawRightPanel&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="23" lineNum="119" parent="globals/Prc152View" pc="268436550" symbol="&lt;globals/Prc152View/&lt;&gt;_drawPrimaryFreq&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="23" lineNum="121" parent="globals/Prc152View" pc="268436553" symbol="&lt;globals/Prc152View/&lt;&gt;_drawPrimaryFreq&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="23" lineNum="123" parent="globals/Prc152View" pc="268436565" symbol="&lt;globals/Prc152View/&lt;&gt;_drawPrimaryFreq&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="23" lineNum="127" parent="globals/Prc152View" pc="268436632" symbol="&lt;globals/Prc152View/&lt;&gt;_drawPrimaryFreq&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="23" lineNum="128" parent="globals/Prc152View" pc="268436645" symbol="&lt;globals/Prc152View/&lt;&gt;_drawPrimaryFreq&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="24" lineNum="28" parent="globals/Prc152View" pc="268436684" symbol="initialize"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="24" lineNum="28" parent="globals/Prc152View" pc="268436686" symbol="initialize"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="25" lineNum="156" parent="globals/Prc152View" pc="268436699" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBottomBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="25" lineNum="157" parent="globals/Prc152View" pc="268436702" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBottomBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="25" lineNum="158" parent="globals/Prc152View" pc="268436715" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBottomBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="25" lineNum="162" parent="globals/Prc152View" pc="268436740" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBottomBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="25" lineNum="163" parent="globals/Prc152View" pc="268436753" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBottomBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="25" lineNum="164" parent="globals/Prc152View" pc="268436810" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBottomBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="26" lineNum="132" parent="globals/Prc152View" pc="268436844" symbol="&lt;globals/Prc152View/&lt;&gt;_drawSecondaryFreq&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="26" lineNum="133" parent="globals/Prc152View" pc="268436847" symbol="&lt;globals/Prc152View/&lt;&gt;_drawSecondaryFreq&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="26" lineNum="135" parent="globals/Prc152View" pc="268436860" symbol="&lt;globals/Prc152View/&lt;&gt;_drawSecondaryFreq&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="26" lineNum="139" parent="globals/Prc152View" pc="268436927" symbol="&lt;globals/Prc152View/&lt;&gt;_drawSecondaryFreq&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="26" lineNum="140" parent="globals/Prc152View" pc="268436940" symbol="&lt;globals/Prc152View/&lt;&gt;_drawSecondaryFreq&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="27" lineNum="37" parent="globals/Prc152View" pc="268436979" symbol="onUpdate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="27" lineNum="38" parent="globals/Prc152View" pc="268436981" symbol="onUpdate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="27" lineNum="40" parent="globals/Prc152View" pc="268436992" symbol="onUpdate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="27" lineNum="41" parent="globals/Prc152View" pc="268437003" symbol="onUpdate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="27" lineNum="42" parent="globals/Prc152View" pc="268437014" symbol="onUpdate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="27" lineNum="43" parent="globals/Prc152View" pc="268437025" symbol="onUpdate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="27" lineNum="44" parent="globals/Prc152View" pc="268437036" symbol="onUpdate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="27" lineNum="45" parent="globals/Prc152View" pc="268437047" symbol="onUpdate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="27" lineNum="46" parent="globals/Prc152View" pc="268437058" symbol="onUpdate"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="88" parent="globals/Prc152View" pc="268437070" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="89" parent="globals/Prc152View" pc="268437073" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="90" parent="globals/Prc152View" pc="268437086" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="91" parent="globals/Prc152View" pc="268437099" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="92" parent="globals/Prc152View" pc="268437112" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="93" parent="globals/Prc152View" pc="268437125" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="95" parent="globals/Prc152View" pc="268437144" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="96" parent="globals/Prc152View" pc="268437157" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="99" parent="globals/Prc152View" pc="268437169" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="102" parent="globals/Prc152View" pc="268437207" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="105" parent="globals/Prc152View" pc="268437240" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="106" parent="globals/Prc152View" pc="268437248" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/PRC-152watchfaceView.mc" id="28" lineNum="107" parent="globals/Prc152View" pc="268437260" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/bin/gen/006-B3907-00/source/Rez.mcgen" id="29" lineNum="28" parent="globals/Rez/Layouts" pc="268437306" symbol="WatchFace"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/bin/gen/006-B3907-00/source/Rez.mcgen" id="29" lineNum="29" parent="globals/Rez/Layouts" pc="268437317" symbol="WatchFace"/>
+<entry filename="/Users/alex/phpstorm_projects/watchface/PRC-152watchface/bin/gen/006-B3907-00/source/Rez.mcgen" id="29" lineNum="31" parent="globals/Rez/Layouts" pc="268437433" symbol="WatchFace"/>
+</pcToLineNum>
+<symbolTable>
+<entry field="true" id="51" symbol="MilFont64"/>
+<entry id="8388639" module="true" symbol="Graphics"/>
+<entry field="true" id="50" symbol="MilFont48"/>
+<entry field="true" id="47" symbol="MilFont30"/>
+<entry field="true" id="38" symbol="&lt;globals/Prc152View/&lt;&gt;_width&gt;"/>
+<entry field="true" id="44" symbol="MilFont18"/>
+<entry field="true" id="42" symbol="MilFont16"/>
+<entry field="true" id="40" symbol="MilFont10"/>
+<entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+<entry field="true" id="54" symbol="LabelGpsFix"/>
+<entry field="true" id="36" symbol="&lt;globals/Prc152View/&lt;&gt;_strBat&gt;"/>
+<entry id="18" method="true" symbol="getUtcTime"/>
+<entry field="true" id="34" symbol="&lt;globals/Prc152View/&lt;&gt;_milfont26b&gt;"/>
+<entry field="true" id="19" symbol="&lt;globals/Prc152View/&lt;&gt;_bottomBarIcepick&gt;"/>
+<entry field="true" id="32" symbol="&lt;globals/Prc152View/&lt;&gt;_milfont15b&gt;"/>
+<entry field="true" id="43" symbol="MilFont16Bold"/>
+<entry id="8388924" module="true" symbol="Gregorian"/>
+<entry id="17" method="true" symbol="getSteps"/>
+<entry field="true" id="60" symbol="LabelVulos"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="10" object="true" symbol="Prc152View"/>
+<entry id="12" method="true" symbol="getBattery"/>
+<entry id="22" method="true" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBackground&gt;"/>
+<entry field="true" id="52" symbol="AppName"/>
+<entry id="7" module="true" symbol="globals/Rez/Strings"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry field="true" id="31" symbol="&lt;globals/Prc152View/&lt;&gt;_height&gt;"/>
+<entry id="15" method="true" symbol="getHeartRate"/>
+<entry id="8388631" module="true" symbol="Activity"/>
+<entry id="8388648" module="true" symbol="WatchUi"/>
+<entry field="true" id="20" symbol="&lt;globals/Prc152View/&lt;&gt;_customFontLarge&gt;"/>
+<entry id="3" module="true" symbol="globals/Rez"/>
+<entry id="2" module="true" symbol="globals/DataManager/&lt;statics&gt;"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry id="8389375" method="true" object="true" symbol="WatchFace"/>
+<entry field="true" id="8389065" symbol="locY"/>
+<entry field="true" id="8389064" symbol="locX"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8" object="true" symbol="DataManager"/>
+<entry id="8389348" symbol="font"/>
+<entry id="8389275" method="true" symbol="getApp"/>
+<entry id="6" module="true" symbol="globals/Rez/Layouts"/>
+<entry id="27" method="true" symbol="&lt;globals/Prc152View/&lt;&gt;_drawRightPanel&gt;"/>
+<entry field="true" id="53" symbol="LabelBat"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry field="true" id="8389063" symbol="identifier"/>
+<entry id="8389349" symbol="justification"/>
+<entry id="9" object="true" symbol="PRC_152watchfaceApp"/>
+<entry field="true" id="45" symbol="MilFont18Bold"/>
+<entry field="true" id="41" symbol="MilFont15Bold"/>
+<entry id="16" method="true" symbol="getNotifications"/>
+<entry id="28" method="true" symbol="&lt;globals/Prc152View/&lt;&gt;_drawScanlines&gt;"/>
+<entry id="4" module="true" symbol="globals/Rez/Drawables"/>
+<entry field="true" id="58" symbol="LabelTom"/>
+<entry field="true" id="37" symbol="&lt;globals/Prc152View/&lt;&gt;_topBarBelly&gt;"/>
+<entry field="true" id="35" symbol="&lt;globals/Prc152View/&lt;&gt;_milfont34b&gt;"/>
+<entry field="true" id="57" symbol="LabelTdr"/>
+<entry id="8388644" module="true" symbol="System"/>
+<entry field="true" id="48" symbol="MilFont32Bold"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry id="23" method="true" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry field="true" id="39" symbol="LauncherIcon"/>
+<entry id="8388610" symbol="statics"/>
+<entry field="true" id="46" symbol="MilFont26Bold"/>
+<entry id="13" method="true" symbol="getDateString"/>
+<entry field="true" id="21" symbol="&lt;globals/Prc152View/&lt;&gt;_customFontSmall&gt;"/>
+<entry id="8389350" module="true" symbol="globals"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry field="true" id="56" symbol="LabelNoGps"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry id="14" method="true" symbol="getGpsStatus"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="24" method="true" symbol="&lt;globals/Prc152View/&lt;&gt;_drawBottomBar&gt;"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry field="true" id="8389347" symbol="color"/>
+<entry id="26" method="true" symbol="&lt;globals/Prc152View/&lt;&gt;_drawPrimaryFreq&gt;"/>
+<entry id="11" module="true" symbol="Layouts"/>
+<entry field="true" id="59" symbol="LabelTypeM"/>
+<entry id="25" method="true" symbol="&lt;globals/Prc152View/&lt;&gt;_drawCentralBar&gt;"/>
+<entry id="8388642" module="true" symbol="Position"/>
+<entry id="5" module="true" symbol="globals/Rez/Fonts"/>
+<entry id="29" method="true" symbol="&lt;globals/Prc152View/&lt;&gt;_drawSecondaryFreq&gt;"/>
+<entry field="true" id="55" symbol="LabelHeader"/>
+<entry field="true" id="49" symbol="MilFont34Bold"/>
+<entry id="8388635" module="true" symbol="Application"/>
+<entry id="30" method="true" symbol="&lt;globals/Prc152View/&lt;&gt;_drawTopBar&gt;"/>
+<entry field="true" id="33" symbol="&lt;globals/Prc152View/&lt;&gt;_milfont16b&gt;"/>
+</symbolTable>
+<localVars>
+<entry endPc="268435758" name="now" stackId="1" startPc="268435664"/>
+<entry endPc="268435758" name="info" stackId="2" startPc="268435664"/>
+<entry endPc="268435808" name="utcTime" stackId="1" startPc="268435780"/>
+<entry endPc="268435892" name="info" stackId="1" startPc="268435834"/>
+<entry endPc="268435938" name="posInfo" stackId="1" startPc="268435896"/>
+<entry endPc="268435970" name="e" stackId="2" startPc="268435945"/>
+<entry arg="true" endPc="268436058" name="dc" stackId="1" startPc="268436031"/>
+<entry arg="true" endPc="268436121" name="dc" stackId="1" startPc="268436059"/>
+<entry endPc="268436120" name="y" stackId="2" startPc="268436091"/>
+<entry arg="true" endPc="268436299" name="dc" stackId="1" startPc="268436122"/>
+<entry endPc="268436298" name="steps" stackId="2" startPc="268436125"/>
+<entry endPc="268436298" name="today" stackId="3" startPc="268436125"/>
+<entry endPc="268436298" name="dayStr" stackId="4" startPc="268436125"/>
+<entry arg="true" endPc="268436378" name="dc" stackId="1" startPc="268436300"/>
+<entry arg="true" endPc="268436467" name="dc" stackId="1" startPc="268436379"/>
+<entry arg="true" endPc="268436549" name="dc" stackId="1" startPc="268436468"/>
+<entry endPc="268436548" name="steps" stackId="2" startPc="268436471"/>
+<entry arg="true" endPc="268436683" name="dc" stackId="1" startPc="268436550"/>
+<entry endPc="268436682" name="t" stackId="2" startPc="268436553"/>
+<entry endPc="268436682" name="timeStr" stackId="3" startPc="268436553"/>
+<entry arg="true" endPc="268436843" name="dc" stackId="1" startPc="268436699"/>
+<entry endPc="268436842" name="steps" stackId="2" startPc="268436702"/>
+<entry endPc="268436842" name="today" stackId="3" startPc="268436702"/>
+<entry arg="true" endPc="268436978" name="dc" stackId="1" startPc="268436844"/>
+<entry endPc="268436977" name="utcTime" stackId="2" startPc="268436847"/>
+<entry endPc="268436977" name="utc" stackId="3" startPc="268436847"/>
+<entry arg="true" endPc="268437069" name="dc" stackId="1" startPc="268436979"/>
+<entry arg="true" endPc="268437305" name="dc" stackId="1" startPc="268437070"/>
+<entry endPc="268437304" name="bat" stackId="2" startPc="268437073"/>
+<entry endPc="268437304" name="barW" stackId="3" startPc="268437073"/>
+<entry endPc="268437304" name="barH" stackId="4" startPc="268437073"/>
+<entry endPc="268437304" name="barX" stackId="5" startPc="268437073"/>
+<entry endPc="268437304" name="filled" stackId="6" startPc="268437073"/>
+<entry arg="true" endPc="268437442" name="dc" stackId="1" startPc="268437306"/>
+<entry endPc="268437442" name="rez_cmp_local_text_TimeLabel" stackId="2" startPc="268437317"/>
+</localVars>
+<deviceInfo deviceVersion="45fe3cbb0de8ea0a70e12628d2697915f1272301" partNumber="006-B3907-00"/>
+<annotations>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="MilFont32Bold"/>
+<annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="MilFont18Bold"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="MilFont15Bold"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="MilFont26Bold"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LabelVulos"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LabelTom"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LabelTypeM"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LabelBat"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LabelNoGps"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="MilFont34Bold"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LabelHeader"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="MilFont18"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="MilFont16"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="MilFont48"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="MilFont10"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="MilFont16Bold"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="MilFont64"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LabelTdr"/>
+<annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="MilFont30"/>
+<annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="LabelGpsFix"/>
+</annotations>
+<dataEntryOffsetMappings>
+<dataEntry label="globals" offset="76" parentId="" symbolId="globals" type="module"/>
+<dataEntry label="globals/Rez" offset="152" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry label="globals/DataManager" offset="214" parentId="globals" symbolId="DataManager" type="class"/>
+<dataEntry label="globals/DataManager/&lt;statics&gt;" offset="262" parentId="DataManager" symbolId="&lt;statics&gt;" type="module"/>
+<dataEntry label="globals/PRC_152watchfaceApp" offset="347" parentId="globals" symbolId="PRC_152watchfaceApp" type="class"/>
+<dataEntry label="globals/Prc152View" offset="418" parentId="globals" symbolId="Prc152View" type="class"/>
+<dataEntry label="globals/Rez/Drawables" offset="660" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry label="globals/Rez/Layouts" offset="695" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry label="globals/Rez/Fonts" offset="730" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry label="globals/Rez/Strings" offset="864" parentId="Rez" symbolId="Strings" type="module"/>
+</dataEntryOffsetMappings>
+<functions>
+<functionEntry accessMode="public" endPc="268435480" name="getApp" startPc="268435460">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435500" name="&lt;init&gt;" parent="Rez" startPc="268435481">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="DataManager">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="globals/DataManager">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435512" name="&lt;init&gt;" parent="PRC_152watchfaceApp" startPc="268435501">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435660" name="&lt;init&gt;" parent="Prc152View" startPc="268435513">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435758" name="getDateString" parent="DataManager" startPc="268435661">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435776" name="getNotifications" parent="DataManager" startPc="268435759">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435808" name="getUtcTime" parent="DataManager" startPc="268435777">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435826" name="getBattery" parent="DataManager" startPc="268435809">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435830" name="getSteps" parent="DataManager" startPc="268435827">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="DataManager">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435892" name="getHeartRate" parent="DataManager" startPc="268435831">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435981" name="getGpsStatus" parent="DataManager" startPc="268435893">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268435984" name="onStart" parent="PRC_152watchfaceApp" startPc="268435982">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436012" name="getInitialView" parent="PRC_152watchfaceApp" startPc="268435985">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436027" name="initialize" parent="PRC_152watchfaceApp" startPc="268436013">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436030" name="onStop" parent="PRC_152watchfaceApp" startPc="268436028">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436058" name="&lt;globals/Prc152View/&lt;&gt;_drawBackground&gt;" parent="Prc152View" startPc="268436031">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436121" name="&lt;globals/Prc152View/&lt;&gt;_drawScanlines&gt;" parent="Prc152View" startPc="268436059">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436299" name="&lt;globals/Prc152View/&lt;&gt;_drawCentralBar&gt;" parent="Prc152View" startPc="268436122">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436378" name="onLayout" parent="Prc152View" startPc="268436300">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436467" name="&lt;globals/Prc152View/&lt;&gt;_drawTopBar&gt;" parent="Prc152View" startPc="268436379">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436549" name="&lt;globals/Prc152View/&lt;&gt;_drawRightPanel&gt;" parent="Prc152View" startPc="268436468">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436683" name="&lt;globals/Prc152View/&lt;&gt;_drawPrimaryFreq&gt;" parent="Prc152View" startPc="268436550">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268436698" name="initialize" parent="Prc152View" startPc="268436684">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436843" name="&lt;globals/Prc152View/&lt;&gt;_drawBottomBar&gt;" parent="Prc152View" startPc="268436699">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268436978" name="&lt;globals/Prc152View/&lt;&gt;_drawSecondaryFreq&gt;" parent="Prc152View" startPc="268436844">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437069" name="onUpdate" parent="Prc152View" startPc="268436979">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="private" endPc="268437305" name="&lt;globals/Prc152View/&lt;&gt;_drawBatteryBar&gt;" parent="Prc152View" startPc="268437070">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" endPc="268437442" name="WatchFace" parent="Layouts" startPc="268437306">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+</functions>
+</debugInfo>

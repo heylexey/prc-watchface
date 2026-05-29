@@ -1,0 +1,15 @@
+<!-- resources/strings/strings.xml -->
+<resources>
+  <!-- App metadata -->
+  <string id="AppName">PRC-152 WatchFace</string>
+
+  <!-- UI static labels — change here, updates everywhere -->
+  <string id="LabelHeader">WIDEBAND NETWORKING</string>
+  <string id="LabelVulos">VULOS</string>
+  <string id="LabelBat">R BAT</string>
+  <string id="LabelTypeM">TYPE M</string>
+  <string id="LabelTdr">TDR</string>
+  <string id="LabelTom">TOM------FT</string>
+  <string id="LabelNoGps">---</string>
+  <string id="LabelGpsFix">FIX</string>
+</resources>

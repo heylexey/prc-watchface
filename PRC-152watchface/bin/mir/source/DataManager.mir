@@ -1,0 +1,301 @@
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Activity,1,14,22]; ]
+import Toybox.Activity;
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Position,3,14,22]; ]
+import Toybox.Position;
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Lang,4,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Time,5,14,18]; ]
+import Toybox.Time;
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 7; @symbol_usingdef<0> = [Toybox,7,6,12]; @symbol_usingdef<1> = [Time,7,13,17]; @symbol_usingdef<2> = [Gregorian,7,18,27]; ]
+using Toybox.Time.Gregorian;
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 9; @symbol_classdef = [DataManager,9,6,17]; ]
+class DataManager {
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 9; ]
+    <init> {
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 12; @symbol_functiondef = [getBattery,12,20,30]; @symbol_return<0> = [Lang,12,36,40]; @symbol_return<1> = [Float,12,41,46]; ]
+    static
+    function getBattery() as Lang.Float {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_12_47_14_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 13 8 ]
+        symbol [ System %tmp.1 13 15 21 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getSystemStats %tmp.2 13 22 36 ];
+        %tmp.2 = getv function %tmp.1 :getSystemStats;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        symbol [ battery %tmp.4 13 39 46 ];
+        %tmp.4 = getv %tmp.3 :battery;
+        ret %tmp.4;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_12_47_14_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 17; @symbol_functiondef = [getHeartRate,17,20,32]; @symbol_return<0> = [Lang,17,38,42]; @symbol_return<1> = [String,17,43,49]; ]
+    static
+    function getHeartRate() as Lang.String {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_17_50_23_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 18 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_17_50_23_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_17_50_23_4_stop" ]
+        %info.1 = local;
+        symbol [ info %info.1 18 12 16 ];
+        symbol [ Activity %tmp.1 18 19 27 ];
+        %tmp.1 = getm $.Toybox.Activity;
+        symbol [ getActivityInfo %tmp.2 18 28 43 ];
+        %tmp.2 = getv function %tmp.1 :getActivityInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %info.1 %tmp.3;
+        symbol [ info %info.1 18 12 16 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 19 8 ]
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_8_21_8_if_stmt:
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_12_19_53_begin:
+        %tmp.4 = lgetv %info.1;
+        symbol [ info %tmp.4 19 12 16 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_8_21_8_if_end;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_28_19_53_true:
+        %tmp.7 = lgetv %info.1;
+        symbol [ info %tmp.7 19 28 32 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        symbol [ currentHeartRate %tmp.9 19 33 49 ];
+        %tmp.9 = getv %tmp.8 :currentHeartRate;
+        %tmp.10 = null;
+        %tmp.11 = ne %tmp.9 %tmp.10;
+        push %tmp.11;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_28_19_53_end:
+        %tmp.12 = phi [%tmp.6 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_12_19_53_begin] [%tmp.11 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_28_19_53_true] [%tmp.12 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_28_19_53_end];
+        bf %tmp.12 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_8_21_8_if_end;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_8_21_8_if_true:
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_59_21_8_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 20 12 ]
+        %tmp.13 = lgetv %info.1;
+        symbol [ info %tmp.13 20 19 23 ];
+        %tmp.14 = as %tmp.13 { (!Null) };
+        symbol [ currentHeartRate %tmp.15 20 24 40 ];
+        %tmp.15 = getv %tmp.14 :currentHeartRate;
+        symbol [ format %tmp.16 20 41 47 ];
+        %tmp.16 = getv function %tmp.15 :format;
+        %tmp.17 = "%03d";
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        ret %tmp.18;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_59_21_8_stop:
+        goto @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_8_21_8_if_end;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_19_8_21_8_if_end:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 22 8 ]
+        %tmp.19 = "---";
+        ret %tmp.19;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_17_50_23_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 26; @symbol_functiondef = [getSteps,26,20,28]; @symbol_return<0> = [Lang,26,34,38]; @symbol_return<1> = [Number,26,39,45]; ]
+    static
+    function getSteps() as Lang.Number {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_26_46_32_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 31 8 ]
+        %tmp.1 = 0;
+        ret %tmp.1;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_26_46_32_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 35; @symbol_functiondef = [getGpsStatus,35,20,32]; @symbol_return<0> = [Lang,35,38,42]; @symbol_return<1> = [String,35,43,49]; ]
+    static
+    function getGpsStatus() as Lang.String {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_35_50_45_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 36 8 ]
+        try @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_beginTry @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_endTry @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_catch @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_finally;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_beginTry:
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_12_41_8_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 37 12 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_12_41_8_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_12_41_8_stop" ]
+        %posInfo.1 = local;
+        symbol [ posInfo %posInfo.1 37 16 23 ];
+        symbol [ Position %tmp.1 37 26 34 ];
+        %tmp.1 = getm $.Toybox.Position;
+        symbol [ getInfo %tmp.2 37 35 42 ];
+        %tmp.2 = getv function %tmp.1 :getInfo;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %posInfo.1 %tmp.3;
+        symbol [ posInfo %posInfo.1 37 16 23 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 38 12 ]
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_12_40_12_if_stmt:
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_16_38_64_begin:
+        %tmp.4 = lgetv %posInfo.1;
+        symbol [ posInfo %tmp.4 38 16 23 ];
+        %tmp.5 = null;
+        %tmp.6 = ne %tmp.4 %tmp.5;
+        bf %tmp.6 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_12_40_12_if_end;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_35_38_64_true:
+        %tmp.7 = lgetv %posInfo.1;
+        symbol [ posInfo %tmp.7 38 35 42 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        symbol [ accuracy %tmp.9 38 43 51 ];
+        %tmp.9 = getv %tmp.8 :accuracy;
+        symbol [ Position %tmp.10 38 55 63 ];
+        %tmp.10 = getm $.Toybox.Position;
+        symbol [ QUALITY_GOOD %tmp.11 38 64 76 ];
+        %tmp.11 = getv %tmp.10 :QUALITY_GOOD;
+        %tmp.12 = gte %tmp.9 %tmp.11;
+        push %tmp.12;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_35_38_64_end:
+        %tmp.13 = phi [%tmp.6 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_16_38_64_begin] [%tmp.12 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_35_38_64_true] [%tmp.13 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_35_38_64_end];
+        bf %tmp.13 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_12_40_12_if_end;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_12_40_12_if_true:
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_78_40_12_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 39 16 ]
+        %tmp.14 = "FIX";
+        jsr @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_finally;
+        ret %tmp.14;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_78_40_12_stop:
+        goto @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_12_40_12_if_end;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_38_12_40_12_if_end:
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_12_41_8_stop:
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_endTry:
+        jsr @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_finally;
+        goto @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_end;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_catch:
+        %tmp.15 = exception;
+        push %tmp.15;
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 41 10 ]
+        %tmp.16 = dup %tmp.15;
+        symbol [ Lang %tmp.17 41 30 34 ];
+        %tmp.17 = getm $.Toybox.Lang;
+        symbol [ Exception %tmp.18 41 35 44 ];
+        %tmp.18 = getv %tmp.17 :Exception;
+        %tmp.19 = isa %tmp.16 %tmp.18;
+        bf %tmp.19 @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_41_10_43_8_next;
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_catch" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_41_10_43_8_next" ]
+        %e.2 = local;
+        symbol [ e %e.2 41 17 18 ];
+        %tmp.20 = dup %tmp.15;
+        %tmp.21 = as %tmp.20 Lang.Exception;
+        lputv %e.2 %tmp.21;
+        symbol [ e %e.2 41 17 18 ];
+        jsr @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_finally;
+        pop;
+        goto @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_end;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_41_10_43_8_next:
+        try @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_catch @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_41_10_43_8_next @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_41_10_43_8_next @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_finally;
+        jsr @_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_finally;
+        throw %tmp.15;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_finally:
+        jsrret;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_36_8_43_8_end:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 44 8 ]
+        %tmp.22 = "---";
+        ret %tmp.22;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_35_50_45_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 48; @symbol_functiondef = [getNotifications,48,20,36]; @symbol_return<0> = [Lang,48,42,46]; @symbol_return<1> = [Number,48,47,53]; ]
+    static
+    function getNotifications() as Lang.Number {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_48_54_50_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 49 8 ]
+        symbol [ System %tmp.1 49 15 21 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getDeviceSettings %tmp.2 49 22 39 ];
+        %tmp.2 = getv function %tmp.1 :getDeviceSettings;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        symbol [ notificationCount %tmp.4 49 42 59 ];
+        %tmp.4 = getv %tmp.3 :notificationCount;
+        ret %tmp.4;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_48_54_50_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 53; @symbol_functiondef = [getDateString,53,20,33]; @symbol_return<0> = [Lang,53,39,43]; @symbol_return<1> = [String,53,44,50]; ]
+    static
+    function getDateString() as Lang.String {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_53_51_60_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 54 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_53_51_60_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_53_51_60_4_stop" ]
+        %now.1 = local;
+        symbol [ now %now.1 54 12 15 ];
+        symbol [ Time %tmp.1 54 19 23 ];
+        %tmp.1 = getm $.Toybox.Time;
+        symbol [ now %tmp.2 54 24 27 ];
+        %tmp.2 = getv function %tmp.1 :now;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %now.1 %tmp.3;
+        symbol [ now %now.1 54 12 15 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 55 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_53_51_60_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_53_51_60_4_stop" ]
+        %info.2 = local;
+        symbol [ info %info.2 55 12 16 ];
+        symbol [ Gregorian %tmp.4 55 19 28 ];
+        %tmp.4 = getm $.Toybox.Time.Gregorian;
+        symbol [ info %tmp.5 55 29 33 ];
+        %tmp.5 = getv function %tmp.4 :info;
+        %tmp.6 = lgetv %now.1;
+        symbol [ now %tmp.6 55 34 37 ];
+        symbol [ Time %tmp.7 55 39 43 ];
+        %tmp.7 = getm $.Toybox.Time;
+        symbol [ FORMAT_SHORT %tmp.8 55 44 56 ];
+        %tmp.8 = getv %tmp.7 :FORMAT_SHORT;
+        %tmp.9 = invoke %tmp.4 %tmp.5(%tmp.6, %tmp.8);
+        lputv %info.2 %tmp.9;
+        symbol [ info %info.2 55 12 16 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 56 8 ]
+        symbol [ Lang %tmp.10 56 15 19 ];
+        %tmp.10 = getm $.Toybox.Lang;
+        symbol [ format %tmp.11 56 20 26 ];
+        %tmp.11 = getv function %tmp.10 :format;
+        %tmp.12 = "$1$/$2$";
+        %tmp.13 = newa 2;
+        %tmp.14 = lgetv %info.2;
+        symbol [ info %tmp.14 57 12 16 ];
+        symbol [ month %tmp.15 57 17 22 ];
+        %tmp.15 = getv %tmp.14 :month;
+        symbol [ format %tmp.16 57 23 29 ];
+        %tmp.16 = getv function %tmp.15 :format;
+        %tmp.17 = "%02d";
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        %tmp.19 = dup %tmp.13;
+        %tmp.20 = aputv %tmp.19 0 %tmp.18;
+        %tmp.21 = lgetv %info.2;
+        symbol [ info %tmp.21 58 12 16 ];
+        symbol [ day %tmp.22 58 17 20 ];
+        %tmp.22 = getv %tmp.21 :day;
+        symbol [ format %tmp.23 58 21 27 ];
+        %tmp.23 = getv function %tmp.22 :format;
+        %tmp.24 = "%02d";
+        %tmp.25 = invoke %tmp.22 %tmp.23(%tmp.24);
+        %tmp.26 = dup %tmp.20;
+        %tmp.27 = aputv %tmp.26 1 %tmp.25;
+        %tmp.28 = invoke %tmp.10 %tmp.11(%tmp.12, %tmp.27);
+        ret %tmp.28;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_53_51_60_4_stop:
+    }
+    [ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 71; @symbol_functiondef = [getUtcTime,71,20,30]; @symbol_return<0> = [Toybox,71,36,42]; @symbol_return<1> = [Time,71,43,47]; @symbol_return<2> = [Gregorian,71,48,57]; @symbol_return<3> = [Info,71,58,62]; ]
+    static
+    function getUtcTime() as Toybox.Time.Gregorian.Info {
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_71_63_75_4_start:
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 73 8 ]
+        [ "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_71_63_75_4_start" "_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_71_63_75_4_stop" ]
+        %utcTime.1 = local;
+        symbol [ utcTime %utcTime.1 73 12 19 ];
+        symbol [ Gregorian %tmp.1 73 22 31 ];
+        %tmp.1 = getm $.Toybox.Time.Gregorian;
+        symbol [ utcInfo %tmp.2 73 32 39 ];
+        %tmp.2 = getv function %tmp.1 :utcInfo;
+        symbol [ Time %tmp.3 73 40 44 ];
+        %tmp.3 = getm $.Toybox.Time;
+        symbol [ now %tmp.4 73 45 48 ];
+        %tmp.4 = getv function %tmp.3 :now;
+        %tmp.5 = invoke %tmp.3 %tmp.4();
+        symbol [ Time %tmp.6 73 52 56 ];
+        %tmp.6 = getm $.Toybox.Time;
+        symbol [ FORMAT_MEDIUM %tmp.7 73 57 70 ];
+        %tmp.7 = getv %tmp.6 :FORMAT_MEDIUM;
+        %tmp.8 = invoke %tmp.1 %tmp.2(%tmp.5, %tmp.7);
+        lputv %utcTime.1 %tmp.8;
+        symbol [ utcTime %utcTime.1 73 12 19 ];
+[ "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc" 74 8 ]
+        %tmp.9 = lgetv %utcTime.1;
+        symbol [ utcTime %tmp.9 74 15 22 ];
+        ret %tmp.9;
+_Users_alex_phpstorm_projects_watchface_PRC_152watchface_source_DataManager_mc_71_63_75_4_stop:
+    }
+}
+[ @file = "/Users/alex/phpstorm_projects/watchface/PRC-152watchface/source/DataManager.mc"; @line = 1; ]
+<init> {
+}
