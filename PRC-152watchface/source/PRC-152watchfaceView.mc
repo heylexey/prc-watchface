@@ -92,7 +92,7 @@ class Prc152View extends WatchUi.WatchFace {
     }
 
     private function _drawTopBar(dc as Dc) {
-        // "WIDEBAND NETWORKING" equivalent — mission/callsign label
+        // "WIDEBAND NETWORKING" 
         dc.setColor(_basicGreen, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
             _width / 2, _height * 0.125,
@@ -172,7 +172,7 @@ class Prc152View extends WatchUi.WatchFace {
     private function _drawPrimaryFreq(dc as Dc) {
         
         var t = System.getClockTime();
-        // Format as frequency: HH.MMM.SS
+        // Format as frequency: HH.MMM.--
         var timeStr = Lang.format(">T1:$1$$2$.--", [
             t.hour.format("%02d"),
             t.min.format("%02d")
@@ -195,13 +195,15 @@ class Prc152View extends WatchUi.WatchFace {
     }
 
     private function _drawCentralBar(dc as Dc) {
-        var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        var dayStr = Lang.format("TYPE M $1$/$2$", [
-            today.day, today.month
+        var todayShort = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        var todayMed = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+        var dayStr = Lang.format("TYPE $1$ $2$/$3$", [
+            todayMed.day_of_week, todayShort.day, todayShort.month
         ]);
+        dayStr = dayStr.toUpper();
 
         //Draw calendar
-        var cldrWidthPos = _width / 4 + 2;;
+        var cldrWidthPos = _width / 3.5 + 2;;
         var cldrHeightPos = _height * 0.65;
         cldrX = cldrWidthPos - (cldrWidthPos * 0.2);
         cldrY = cldrHeightPos - (cldrHeightPos * 0.2);
@@ -217,19 +219,19 @@ class Prc152View extends WatchUi.WatchFace {
 
         if(rawNotifs != 0){
             notifs = rawNotifs.toString();
-            // Keep only the rightmost 6 characters
+            // Keep only the rightmost 3 characters
             if (notifs.length() > 3) {
                 notifs = notifs.substring(0, 3);
             }
             
-            if(notifs.length() < 6) {
+            if(notifs.length() < 3) {
             //Formatting steps for display
                 while (notifs.length() < 3) {
                     notifs = notifs + "-";
                 }
             }
         }
-        var msgWidthPos = (_width / 4) * 3;
+        var msgWidthPos = (_width / 3.7) * 3;
         var msgHeightPos = _height * 0.65;
         notifX = msgWidthPos - (msgWidthPos * 0.2);
         notifY = msgHeightPos - (msgHeightPos * 0.2);
@@ -238,8 +240,6 @@ class Prc152View extends WatchUi.WatchFace {
         var notifsStr = Lang.format("MSG $1$", [notifs]);
         dc.drawText(msgWidthPos, msgHeightPos, _milfont18b, notifsStr,
                     Graphics.TEXT_JUSTIFY_CENTER);
-            // dc.drawText(msgWidthPos, _height * 0.65, _milfont18b, "MSG 0001",
-            //         Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function _drawBottomBar(dc as Dc) {
@@ -247,25 +247,5 @@ class Prc152View extends WatchUi.WatchFace {
         dc.drawLine(_width / 28, _bottomBarIcepick, Math.round(_width * 0.9643), _height / 1.4);
         dc.drawText(_width / 2, 208, _milfont34bl, "FALCON III",
                     Graphics.TEXT_JUSTIFY_CENTER);
-    }
-
-    function onPress(evt) {
-        System.println("on_press!");
-
-        var iterator = Complications.getComplications();
-        var complication = iterator.next();
-
-        while (complication != null) {
-        // You can check labels (e.g. "Calories", "Heart Rate") to match your target
-        if (complication.getType() == 17) {
-            var myComplicationId = complication.complicationId;
-            
-            // Use this exact ID in exitTo
-            Complications.exitTo(myComplicationId);
-                break;
-            }
-            complication = iterator.next();
-        }
-        return true;
     }
 }
