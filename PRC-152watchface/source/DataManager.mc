@@ -3,8 +3,9 @@ import Toybox.System;
 import Toybox.Position;
 import Toybox.Lang;
 import Toybox.Time;
-//import Toybox.Time.Gregorian;
 using Toybox.Time.Gregorian;
+using Toybox.ActivityMonitor;
+
 
 class DataManager {
 
@@ -24,11 +25,11 @@ class DataManager {
 
     // ── Steps (null-safe) ───────────────────────────
     static function getSteps() as Lang.Number {
-        // var info = Activity.getActivityInfo();
-        // if (info != null && info.steps != null) {
-        //     return info.steps;
-        // }
-        return 0;
+            var info = ActivityMonitor.getInfo();
+            if (info != null && info.steps != null) {
+                return info.steps;
+            }
+            return 0;
     }
 
     // ── GPS Status ──────────────────────────────────
@@ -45,8 +46,11 @@ class DataManager {
     }
 
     // ── Notifications ───────────────────────────────
-    static function getNotifications() as Lang.Number {
-        return System.getDeviceSettings().notificationCount;
+    static function getUnreadNotifications() as Number {
+        var settings = System.getDeviceSettings();
+        if (settings != null) {
+            return settings.notificationCount;
+        }
     }
 
     // ── Date string ─────────────────────────────────

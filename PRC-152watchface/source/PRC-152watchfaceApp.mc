@@ -1,6 +1,8 @@
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
+using Toybox.Complications;
+using Toybox.Application;
 
 class PRC_152watchfaceApp extends Application.AppBase {
 
@@ -16,10 +18,12 @@ class PRC_152watchfaceApp extends Application.AppBase {
     function onStop(state as Dictionary?) as Void {
     }
 
-    // Return the initial view of your application here
-    function getInitialView() as [Views] or [Views, InputDelegates] {
-    return [ new Prc152View() ];
-}
+    function getInitialView() {
+        var view = new Prc152View();
+        var delegate = new PRC152Delegate(view); 
+
+        return [ view, delegate ];
+    }
 
 }
 
