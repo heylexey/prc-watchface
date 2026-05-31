@@ -46,7 +46,7 @@ class Prc152View extends WatchUi.WatchFace {
 
     private var _topBarBelly = 0;
     private var _bottomBarIcepick = 0;
-    private var _basicGreen = Graphics.COLOR_GREEN;
+    private var _basicGreen = 0x005500;
 
     function initialize() { 
         System.println("WatchFace!");
@@ -120,16 +120,17 @@ class Prc152View extends WatchUi.WatchFace {
     private function _drawBatteryBar(dc as Graphics.Dc) as Void {
         var strBat = "R BAT";
         var bat    = DataManager.getBattery();
-        var barW   = _width * 0.1964;
-        var barH   = _height * 0.0321;
-        var barX   = _width * 0.2729;
+        var barW   = _width * 0.2;
+        var barH   = _height * 0.05;
+        var barX   = _width * 0.3;
         var filled = (bat / 100.0 * barW).toNumber();
 
+        System.println(_width + " x " + _height);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(1);
 
         // "R BAT" label
-        dc.drawText(_width * 0.0821 + 2, _topBarBelly, _milfont16b, strBat, Graphics.TEXT_JUSTIFY_LEFT);
+        dc.drawText(_width * 0.0821 + 2, _topBarBelly, _milfont30b, strBat, Graphics.TEXT_JUSTIFY_LEFT);
 
         // Outline (empty bar)
         dc.drawRectangle(barX, _topBarBelly + (_width * 0.0179), barW, barH);
@@ -169,7 +170,7 @@ class Prc152View extends WatchUi.WatchFace {
         gscHeight = gscHeightPos + (gscHeightPos * 0.2);
         
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(gscWidthPos, gscHeightPos, _milfont16b,
+        dc.drawText(gscWidthPos, gscHeightPos, _milfont30b,
                     Lang.format("GSC $1$", [prepSteps]),//Ground Steps Count
                     Graphics.TEXT_JUSTIFY_RIGHT);
     }
@@ -201,13 +202,15 @@ class Prc152View extends WatchUi.WatchFace {
 
     private function _drawCentralBar(dc as Dc) {
         var cbHeight = _height * 0.675;
-        var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        var dayStr = Lang.format("TYPE M $1$/$2$", [
-            today.day, today.month
+        var todayShort = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        var todayMed = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+        var dayStr = Lang.format("TYPE $1$ $2$/$3$", [
+            todayMed.day_of_week, todayShort.day, todayShort.month
         ]);
+        dayStr = dayStr.toUpper();
 
         //Draw calendar
-        var cldrWidthPos = _width / 3.5 + 2;;
+        var cldrWidthPos = _width / 3.25 + 2;;
         var cldrHeightPos = cbHeight;
         cldrX = cldrWidthPos - (cldrWidthPos * 0.2);
         cldrY = cldrHeightPos - (cldrHeightPos * 0.2);
@@ -235,7 +238,7 @@ class Prc152View extends WatchUi.WatchFace {
                 }
             }
         }
-        var msgWidthPos = (_width / 4) * 3;
+        var msgWidthPos = (_width / 5) * 4;
         notifX = msgWidthPos - (msgWidthPos * 0.2);
         notifY = cbHeight - (cbHeight * 0.2);
         notifWidth = msgWidthPos + (msgWidthPos * 0.2);
