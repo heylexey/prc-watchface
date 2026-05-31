@@ -33,16 +33,11 @@ class Prc152View extends WatchUi.WatchFace {
 
     //Fonts
     private var _milfont16b = loadResource(Rez.Fonts.MilFont16Bold);
-    private var _milfont15b = loadResource(Rez.Fonts.MilFont15Bold);
     private var _milfont18b = loadResource(Rez.Fonts.MilFont18Bold);
+    private var _milfont15b = loadResource(Rez.Fonts.MilFont15Bold);
     private var _milfont20b = loadResource(Rez.Fonts.MilFont20Bold);
-    private var _milfont26b = loadResource(Rez.Fonts.MilFont26Bold);
-    private var _milfont30b = loadResource(Rez.Fonts.MilFont30Bold);
     private var _milfont34bl = loadResource(Rez.Fonts.MilFont34BoldItalic);
-    private var _milfont42b_l = loadResource(Rez.Fonts.MilFont42BoldItalic);     
     private var _milfont46b = loadResource(Rez.Fonts.MilFont46Bold);
-    private var _milfont60b = loadResource(Rez.Fonts.MilFont60Bold);
-    private var _milfont70b = loadResource(Rez.Fonts.MilFont70Bold);
 
     private var _topBarBelly = 0;
     private var _bottomBarIcepick = 0;
@@ -54,10 +49,10 @@ class Prc152View extends WatchUi.WatchFace {
     }
 
     function onLayout(dc as Dc) {
-        _width  = dc.getWidth();
-        _height = dc.getHeight();
-        _topBarBelly = Math.round(_height * 0.2);
-        _bottomBarIcepick = Math.round(_height * 0.75);
+        _width  = dc.getWidth();   // 280
+        _height = dc.getHeight();  // 280
+        _topBarBelly = Math.round(_height * 0.21428571428);
+        _bottomBarIcepick = Math.round(_height / 1.4);
     }
 
     function onUpdate(dc as Dc) {
@@ -97,11 +92,11 @@ class Prc152View extends WatchUi.WatchFace {
     }
 
     private function _drawTopBar(dc as Dc) {
-        // "WIDEBAND NETWORKING" equivalent — mission/callsign label
+        // "WIDEBAND NETWORKING" 
         dc.setColor(_basicGreen, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
             _width / 2, _height * 0.125,
-            _milfont20b,
+            _milfont15b,
             "WIDEBAND NETWORKING",
             Graphics.TEXT_JUSTIFY_CENTER
         );
@@ -177,13 +172,13 @@ class Prc152View extends WatchUi.WatchFace {
     private function _drawPrimaryFreq(dc as Dc) {
         
         var t = System.getClockTime();
-        // Format as frequency: HH.MMM.SS
+        // Format as frequency: HH.MMM.--
         var timeStr = Lang.format(">T1:$1$$2$.--", [
             t.hour.format("%02d"),
             t.min.format("%02d")
         ]);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(_width / 2, _height * 0.3914, _milfont70b, timeStr,
+        dc.drawText(_width / 2, _height * 0.3914, _milfont46b, timeStr,
                     Graphics.TEXT_JUSTIFY_CENTER);
     }
 
@@ -195,25 +190,27 @@ class Prc152View extends WatchUi.WatchFace {
             utcTime.min.format("%02d")
         ]);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(_width / 14, _height * 0.55, _milfont26b, utc,
+        dc.drawText(_width / 14, _height * 0.5143, _milfont20b, utc,
                     Graphics.TEXT_JUSTIFY_LEFT);       
     }
 
     private function _drawCentralBar(dc as Dc) {
-        var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        var dayStr = Lang.format("TYPE M $1$/$2$", [
-            today.day, today.month
+        var todayShort = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        var todayMed = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
+        var dayStr = Lang.format("TYPE $1$ $2$/$3$", [
+            todayMed.day_of_week, todayShort.day, todayShort.month
         ]);
+        dayStr = dayStr.toUpper();
 
         //Draw calendar
-        var cldrWidthPos = _width / 4 + 2;;
+        var cldrWidthPos = _width / 3.5 + 2;;
         var cldrHeightPos = _height * 0.65;
         cldrX = cldrWidthPos - (cldrWidthPos * 0.2);
         cldrY = cldrHeightPos - (cldrHeightPos * 0.2);
         cldrWidth = cldrWidthPos + (cldrWidthPos * 0.2);
         cldrHeight = cldrHeightPos + (cldrHeightPos * 0.2);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cldrWidthPos, cldrHeightPos, _milfont30b, dayStr,
+        dc.drawText(cldrWidthPos, cldrHeightPos, _milfont18b, dayStr,
                     Graphics.TEXT_JUSTIFY_CENTER);
 
         //Draw notifications counter (MSG)
@@ -222,55 +219,33 @@ class Prc152View extends WatchUi.WatchFace {
 
         if(rawNotifs != 0){
             notifs = rawNotifs.toString();
-            // Keep only the rightmost 6 characters
+            // Keep only the rightmost 3 characters
             if (notifs.length() > 3) {
                 notifs = notifs.substring(0, 3);
             }
             
-            if(notifs.length() < 6) {
+            if(notifs.length() < 3) {
             //Formatting steps for display
                 while (notifs.length() < 3) {
                     notifs = notifs + "-";
                 }
             }
         }
-        var msgWidthPos = (_width / 4) * 3;
+        var msgWidthPos = (_width / 3.7) * 3;
         var msgHeightPos = _height * 0.65;
         notifX = msgWidthPos - (msgWidthPos * 0.2);
-        notifY = cbHeight - (cbHeight * 0.2);
+        notifY = msgHeightPos - (msgHeightPos * 0.2);
         notifWidth = msgWidthPos + (msgWidthPos * 0.2);
-        notifHeight = cbHeight + (cbHeight * 0.2);
+        notifHeight = msgHeightPos + (msgHeightPos * 0.2);
         var notifsStr = Lang.format("MSG $1$", [notifs]);
-        dc.drawText(msgWidthPos, cbHeight, _milfont30b, notifsStr,
+        dc.drawText(msgWidthPos, msgHeightPos, _milfont18b, notifsStr,
                     Graphics.TEXT_JUSTIFY_CENTER);
-            // dc.drawText(msgWidthPos, _height * 0.65, _milfont18b, "MSG 0001",
-            //         Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function _drawBottomBar(dc as Dc) {
         dc.setColor(_basicGreen, Graphics.COLOR_TRANSPARENT);
-        var bottomTxtPos = _height - (_bottomBarIcepick * 0.32);
-        dc.drawText(_width / 2, bottomTxtPos, _milfont42b_l, "FALCON III",
+        dc.drawLine(_width / 28, _bottomBarIcepick, Math.round(_width * 0.9643), _height / 1.4);
+        dc.drawText(_width / 2, 208, _milfont34bl, "FALCON III",
                     Graphics.TEXT_JUSTIFY_CENTER);
-    }
-
-    function onPress(evt) {
-        System.println("on_press!");
-
-        var iterator = Complications.getComplications();
-        var complication = iterator.next();
-
-        while (complication != null) {
-        // You can check labels (e.g. "Calories", "Heart Rate") to match your target
-        if (complication.getType() == 17) {
-            var myComplicationId = complication.complicationId;
-            
-            // Use this exact ID in exitTo
-            Complications.exitTo(myComplicationId);
-                break;
-            }
-            complication = iterator.next();
-        }
-        return true;
     }
 }

@@ -26,11 +26,6 @@ class PRC152Delegate extends WatchUi.WatchFaceDelegate {
         // --- BOUNDING BOX CHECK ---
         // Is tapX greater than the left edge, but less than the right edge?
         // Is tapY greater than the top edge, but less than the bottom edge?
-        System.println("notifX: " + mView.notifX 
-        + ", notifY: " + mView.notifY 
-        + ", notifY: " + mView.notifWidth 
-        + ", notifHeight: " + mView.notifHeight);
-
         if (tapX >= mView.notifX && tapX <= (mView.notifX + mView.notifWidth) &&
             tapY >= mView.notifY && tapY <= (mView.notifY + mView.notifHeight)) {
             pressType = 17;

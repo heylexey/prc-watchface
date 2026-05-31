@@ -1,91 +1,93 @@
-<resources>    
+<resources>
+
     <font
         id="MilFont64"
         filename="milfon64.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTYQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
 
     <font
         id="MilFont16"
         filename="milfon16.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTYQVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
 
     <font
         id="MilFont48"
         filename="milfont48.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
 
     <font
         id="MilFont10"
         filename="milfont10.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />    
     <font
         id="MilFont18Bold"
         filename="milfont18b.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
 
     <font
         id="MilFont18"
         filename="milfont18.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQVYXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
+
     <font
         id="MilFont30"
         filename="milfont30.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />  
     <font
         id="MilFont16Bold"
         filename="milfont16b.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQVYXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
     <font
         id="MilFont15Bold"
         filename="milfont15b.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />  
     <font
         id="MilFont32Bold"
         filename="milfont32b.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />  
     <font
         id="MilFont26Bold"
         filename="milfont26.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
     <font
         id="MilFont34Bold"
         filename="milfont34b.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
     <font
         id="MilFont34BoldItalic"
         filename="milfont34b_l.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />   
     <font
         id="MilFont36Bold"
         filename="milfont36b.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
     <font
         id="MilFont40Bold"
         filename="milfont40b.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />           
     <font
         id="MilFont46Bold"
         filename="milfont46b.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
     <font
         id="MilFont20Bold"
         filename="milfont20b.fnt"
-        filter="0123456789:.>-/ABCDEFGHIKLMNOPRSTQYVWXZ "
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />                              
 </resources>
