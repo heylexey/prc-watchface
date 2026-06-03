@@ -71,6 +71,11 @@
         filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
     <font
+        id="MilFont40BoldItalic"
+        filename="milfont40b_l.fnt"
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+        antialias="true" />   
+    <font
         id="MilFont42BoldItalic"
         filename="milfont42b_l.fnt"
         filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
@@ -86,13 +91,18 @@
         filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />     
     <font
-        id="MilFont48"
+        id="MilFont48Bold"
         filename="milfont48.fnt"
         filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
     <font
-        id="MilFont48BoldItalic"
-        filename="milfont48b_l.fnt"
+        id="MilFont50Bold"
+        filename="milfont50b.fnt"
+        filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
+        antialias="true" />        
+    <font
+        id="MilFont56Bold"
+        filename="milfont56b.fnt"
         filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
     <font

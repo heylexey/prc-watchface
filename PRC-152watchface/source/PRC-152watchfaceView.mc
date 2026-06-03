@@ -9,6 +9,11 @@ using Toybox.System;
 
 class Prc152View extends WatchUi.WatchFace {
 
+    //=========Watch type by screen size==========
+    public const TYPETACTIX7 as Lang.Number = 280;
+    public const TYPEINSTINCT3 as Lang.Number = 416;
+    public const TYPEVIVA6 as Lang.Number = 390;
+    
     //=========Notification area==========
     public var notifX = 0;
     public var notifY = 0;
@@ -31,26 +36,20 @@ class Prc152View extends WatchUi.WatchFace {
     private var _width  as Number = 0;
     private var _height as Number = 0;
 
-    //Fonts
-    private var _milfont16b = loadResource(Rez.Fonts.MilFont16Bold);
-    private var _milfont15b = loadResource(Rez.Fonts.MilFont15Bold);
-    private var _milfont18b = loadResource(Rez.Fonts.MilFont18Bold);
-    private var _milfont20b = loadResource(Rez.Fonts.MilFont20Bold);
-    private var _milfont26b = loadResource(Rez.Fonts.MilFont26Bold);
-    private var _milfont30b = loadResource(Rez.Fonts.MilFont30Bold);
-    private var _milfont34bl = loadResource(Rez.Fonts.MilFont34BoldItalic);
-    private var _milfont42b_l = loadResource(Rez.Fonts.MilFont42BoldItalic);     
-    private var _milfont46b = loadResource(Rez.Fonts.MilFont46Bold);
-    private var _milfont60b = loadResource(Rez.Fonts.MilFont60Bold);
-    private var _milfont70b = loadResource(Rez.Fonts.MilFont70Bold);
+    //=========Fonts==========
+    var _topLogoFont;
+    var _barFont;
+    var _t1Font;
+    var _t2Font;
+    var _bottomLogoFont;
 
     private var _topBarBelly = 0;
     private var _bottomBarIcepick = 0;
     private var _basicGreen = 0x005500;
 
     function initialize() { 
-        System.println("WatchFace!");
-        WatchFace.initialize();     
+        System.println("View intialization");
+        WatchFace.initialize();    
     }
 
     function onLayout(dc as Dc) {
@@ -58,6 +57,9 @@ class Prc152View extends WatchUi.WatchFace {
         _height = dc.getHeight();
         _topBarBelly = Math.round(_height * 0.2);
         _bottomBarIcepick = Math.round(_height * 0.75);
+
+        _fontResolver();
+        System.println("Screen size " + _width + " x " + _height);
     }
 
     function onUpdate(dc as Dc) {
@@ -99,9 +101,10 @@ class Prc152View extends WatchUi.WatchFace {
     private function _drawTopBar(dc as Dc) {
         // "WIDEBAND NETWORKING" equivalent — mission/callsign label
         dc.setColor(_basicGreen, Graphics.COLOR_TRANSPARENT);
+
         dc.drawText(
             _width / 2, _height * 0.125,
-            _milfont20b,
+            _topLogoFont,
             "WIDEBAND NETWORKING",
             Graphics.TEXT_JUSTIFY_CENTER
         );
@@ -121,24 +124,24 @@ class Prc152View extends WatchUi.WatchFace {
         var strBat = "R BAT";
         var bat    = DataManager.getBattery();
         var barW   = _width * 0.2;
-        var barH   = _height * 0.05;
+        var barH   = _height * 0.04;
         var barX   = _width * 0.3;
+        var barY   = _topBarBelly + (_height * 0.0179);
         var filled = (bat / 100.0 * barW).toNumber();
 
-        System.println(_width + " x " + _height);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
         dc.setPenWidth(1);
 
         // "R BAT" label
-        dc.drawText(_width * 0.0821 + 2, _topBarBelly, _milfont30b, strBat, Graphics.TEXT_JUSTIFY_LEFT);
+        dc.drawText(_width * 0.0821 + 2, _topBarBelly, _barFont, strBat, Graphics.TEXT_JUSTIFY_LEFT);
 
         // Outline (empty bar)
-        dc.drawRectangle(barX, _topBarBelly + (_width * 0.0179), barW, barH);
-
+        dc.drawRectangle(barX, barY, barW, barH);
+        
         // Fill (charged portion)
         if (filled > 2) {
             dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
-            dc.fillRectangle(barX + 1, _topBarBelly + (_width / 46.6666), filled - 2, barH - 2);
+            dc.fillRectangle(barX + 1, barY, filled - 2, barH - 1);
         }
     }
 
@@ -170,7 +173,7 @@ class Prc152View extends WatchUi.WatchFace {
         gscHeight = gscHeightPos + (gscHeightPos * 0.2);
         
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(gscWidthPos, gscHeightPos, _milfont30b,
+        dc.drawText(gscWidthPos, gscHeightPos, _barFont,
                     Lang.format("GSC $1$", [prepSteps]),//Ground Steps Count
                     Graphics.TEXT_JUSTIFY_RIGHT);
     }
@@ -184,7 +187,7 @@ class Prc152View extends WatchUi.WatchFace {
             t.min.format("%02d")
         ]);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(_width / 2, _height * 0.3914, _milfont70b, timeStr,
+        dc.drawText(_width / 2, _height * 0.3914, _t1Font, timeStr,
                     Graphics.TEXT_JUSTIFY_CENTER);
     }
 
@@ -196,7 +199,7 @@ class Prc152View extends WatchUi.WatchFace {
             utcTime.min.format("%02d")
         ]);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(_width / 14, _height * 0.55, _milfont26b, utc,
+        dc.drawText(_width * 0.02, _height * 0.55, _t2Font, utc,
                     Graphics.TEXT_JUSTIFY_LEFT);       
     }
 
@@ -217,7 +220,7 @@ class Prc152View extends WatchUi.WatchFace {
         cldrWidth = cldrWidthPos + (cldrWidthPos * 0.2);
         cldrHeight = cldrHeightPos + (cldrHeightPos * 0.2);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(cldrWidthPos, cldrHeightPos, _milfont30b, dayStr,
+        dc.drawText(cldrWidthPos, cldrHeightPos, _barFont, dayStr,
                     Graphics.TEXT_JUSTIFY_CENTER);
 
         //Draw notifications counter (MSG)
@@ -226,12 +229,12 @@ class Prc152View extends WatchUi.WatchFace {
 
         if(rawNotifs != 0){
             notifs = rawNotifs.toString();
-            // Keep only the rightmost 6 characters
+            // Keep only the rightmost 3 characters
             if (notifs.length() > 3) {
                 notifs = notifs.substring(0, 3);
             }
             
-            if(notifs.length() < 6) {
+            if(notifs.length() < 3) {
             //Formatting steps for display
                 while (notifs.length() < 3) {
                     notifs = notifs + "-";
@@ -244,16 +247,52 @@ class Prc152View extends WatchUi.WatchFace {
         notifWidth = msgWidthPos + (msgWidthPos * 0.2);
         notifHeight = cbHeight + (cbHeight * 0.2);
         var notifsStr = Lang.format("MSG $1$", [notifs]);
-        dc.drawText(msgWidthPos, cbHeight, _milfont30b, notifsStr,
+        dc.drawText(msgWidthPos, cbHeight, _barFont, notifsStr,
                     Graphics.TEXT_JUSTIFY_CENTER);
-            // dc.drawText(msgWidthPos, _height * 0.65, _milfont18b, "MSG 0001",
-            //         Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function _drawBottomBar(dc as Dc) {
         dc.setColor(_basicGreen, Graphics.COLOR_TRANSPARENT);
         var bottomTxtPos = _height - (_bottomBarIcepick * 0.32);
-        dc.drawText(_width / 2, bottomTxtPos, _milfont42b_l, "FALCON III",
+        dc.drawText(_width / 2, bottomTxtPos, _bottomLogoFont, "FALCON III",
                     Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    private function _fontResolver() {
+        switch (_width.toNumber()) {
+            case TYPETACTIX7:
+            System.println("TYPETACTIX7");
+                _topLogoFont = loadResource(Rez.Fonts.MilFont15Bold);
+                _barFont = loadResource(Rez.Fonts.MilFont16Bold);
+                _t1Font = loadResource(Rez.Fonts.MilFont50Bold);
+                _t2Font = loadResource(Rez.Fonts.MilFont20Bold);
+                _bottomLogoFont = loadResource(Rez.Fonts.MilFont34BoldItalic);
+                break;
+            case TYPEVIVA6:
+            System.println("TYPEVIVA6");
+                _topLogoFont = loadResource(Rez.Fonts.MilFont20Bold);
+                _barFont = loadResource(Rez.Fonts.MilFont26Bold);
+                _t1Font = loadResource(Rez.Fonts.MilFont70Bold);
+                _t2Font = loadResource(Rez.Fonts.MilFont26Bold);
+                _bottomLogoFont = loadResource(Rez.Fonts.MilFont40BoldItalic);
+                break;
+            case TYPEINSTINCT3:
+            System.println("TYPEINSTINCT3");
+                _topLogoFont = loadResource(Rez.Fonts.MilFont20Bold);
+                _barFont = loadResource(Rez.Fonts.MilFont30Bold);
+                _t1Font = loadResource(Rez.Fonts.MilFont70Bold);
+                _t2Font = loadResource(Rez.Fonts.MilFont26Bold);
+                _bottomLogoFont = loadResource(Rez.Fonts.MilFont42BoldItalic);
+                break;                                
+            default:
+            System.println("DEFAULT type");
+                _topLogoFont = loadResource(Rez.Fonts.MilFont20Bold);
+                _barFont = loadResource(Rez.Fonts.MilFont26Bold);
+                _t1Font = loadResource(Rez.Fonts.MilFont70Bold);
+                _t2Font = loadResource(Rez.Fonts.MilFont26Bold);
+                _bottomLogoFont = loadResource(Rez.Fonts.MilFont40BoldItalic);            
+                break;
+        }
+         
     }
 }
