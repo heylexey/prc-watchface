@@ -7,10 +7,9 @@ class PRC152Delegate extends WatchUi.WatchFaceDelegate {
     private var mView;
 
     function initialize(view) {
-        System.println("InputDelegate!");
+        System.println("PRC152Delegate init");
         WatchUi.WatchFaceDelegate.initialize();
         mView = view;
-        System.println("after WatchUi.InputDelegate.initialize();!");
     }
 
     // Watch faces do not use onTap. They use onPress.
@@ -54,7 +53,6 @@ class PRC152Delegate extends WatchUi.WatchFaceDelegate {
         var complication = iterator.next();
 
         while (complication != null) {
-        System.println("complication.getType()");
     
         if (complication.getType() == pressType) {
             var complicationId = complication.complicationId;
