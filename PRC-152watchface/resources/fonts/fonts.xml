@@ -25,6 +25,7 @@
         filename="milfont18.fnt"
         filter="0123456789:.>-/ABCDEFGHIJKLMNOPQRSTUVWXYZ "
         antialias="true" />
+
     <font
         id="MilFont20Bold"
         filename="milfont20b.fnt"

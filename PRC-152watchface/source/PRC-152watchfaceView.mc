@@ -99,7 +99,7 @@ class Prc152View extends WatchUi.WatchFace {
     }
 
     private function _drawTopBar(dc as Dc) {
-        // "WIDEBAND NETWORKING" equivalent — mission/callsign label
+        // "WIDEBAND NETWORKING" 
         dc.setColor(_basicGreen, Graphics.COLOR_TRANSPARENT);
 
         dc.drawText(
@@ -181,8 +181,8 @@ class Prc152View extends WatchUi.WatchFace {
     private function _drawPrimaryFreq(dc as Dc) {
         
         var t = System.getClockTime();
-        // Format as frequency: HH.MMM.SS
-        var timeStr = Lang.format("T1:$1$$2$.--", [
+        // Format as frequency: HH.MMM.--
+        var timeStr = Lang.format(">T1:$1$$2$.--", [
             t.hour.format("%02d"),
             t.min.format("%02d")
         ]);
@@ -229,12 +229,12 @@ class Prc152View extends WatchUi.WatchFace {
 
         if(rawNotifs != 0){
             notifs = rawNotifs.toString();
-            // Keep only the rightmost 6 characters
+            // Keep only the rightmost 3 characters
             if (notifs.length() > 3) {
                 notifs = notifs.substring(0, 3);
             }
             
-            if(notifs.length() < 6) {
+            if(notifs.length() < 3) {
             //Formatting steps for display
                 while (notifs.length() < 3) {
                     notifs = notifs + "-";
@@ -243,9 +243,9 @@ class Prc152View extends WatchUi.WatchFace {
         }
         var msgWidthPos = (_width / 5) * 4;
         notifX = msgWidthPos - (msgWidthPos * 0.2);
-        notifY = cbHeight - (cbHeight * 0.2);
+        notifY = msgHeightPos - (msgHeightPos * 0.2);
         notifWidth = msgWidthPos + (msgWidthPos * 0.2);
-        notifHeight = cbHeight + (cbHeight * 0.2);
+        notifHeight = msgHeightPos + (msgHeightPos * 0.2);
         var notifsStr = Lang.format("MSG $1$", [notifs]);
         dc.drawText(msgWidthPos, cbHeight, _barFont, notifsStr,
                     Graphics.TEXT_JUSTIFY_CENTER);
