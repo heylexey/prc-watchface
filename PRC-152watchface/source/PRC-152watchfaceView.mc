@@ -229,12 +229,12 @@ class Prc152View extends WatchUi.WatchFace {
 
         if(rawNotifs != 0){
             notifs = rawNotifs.toString();
-            // Keep only the rightmost 6 characters
+            // Keep only the rightmost 3 characters
             if (notifs.length() > 3) {
                 notifs = notifs.substring(0, 3);
             }
             
-            if(notifs.length() < 6) {
+            if(notifs.length() < 3) {
             //Formatting steps for display
                 while (notifs.length() < 3) {
                     notifs = notifs + "-";
