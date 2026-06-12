@@ -45,7 +45,7 @@ class Prc152View extends WatchUi.WatchFace {
 
     private var _topBarBelly = 0;
     private var _bottomBarIcepick = 0;
-    private var _basicGreen = 0x005500;
+    private var _basicColor = 0x005500;
 
     function initialize() { 
         System.println("View intialization");
@@ -63,6 +63,7 @@ class Prc152View extends WatchUi.WatchFace {
     }
 
     function onUpdate(dc as Dc) {
+        _basicColor = ThemeManager.getAccentColor();
         _drawBackground(dc);
         // _drawScanlines(dc);
         _drawTopBar(dc);
@@ -80,7 +81,7 @@ class Prc152View extends WatchUi.WatchFace {
         dc.clear();
 
         // Draw green area
-        dc.setColor(_basicGreen, _basicGreen);
+        dc.setColor(_basicColor, _basicColor);
 
         dc.fillRectangle(
             0,
@@ -100,12 +101,12 @@ class Prc152View extends WatchUi.WatchFace {
 
     private function _drawTopBar(dc as Dc) {
         // "WIDEBAND NETWORKING" equivalent — mission/callsign label
-        dc.setColor(_basicGreen, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(_basicColor, Graphics.COLOR_TRANSPARENT);
 
         dc.drawText(
             _width / 2, _height * 0.125,
             _topLogoFont,
-            "WIDEBAND NETWORKING",
+            loadResource(Rez.Strings.LabelHeader),
             Graphics.TEXT_JUSTIFY_CENTER
         );
 
@@ -121,7 +122,7 @@ class Prc152View extends WatchUi.WatchFace {
     //   - Guards against filled=0 to avoid drawing 0-width rectangle
     // ─────────────────────────────────────────────────────────────
     private function _drawBatteryBar(dc as Graphics.Dc) as Void {
-        var strBat = "R BAT";
+        var strBat = loadResource(Rez.Strings.LabelBat);
         var bat    = DataManager.getBattery();
         var barW   = _width * 0.2;
         var barH   = _height * 0.04;
@@ -174,7 +175,7 @@ class Prc152View extends WatchUi.WatchFace {
         
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
         dc.drawText(gscWidthPos, gscHeightPos, _barFont,
-                    Lang.format("GSC $1$", [prepSteps]),//Ground Steps Count
+                    Lang.format("$1$ $2$", [loadResource(Rez.Strings.Labelgsc), prepSteps]),//Ground Steps Count
                     Graphics.TEXT_JUSTIFY_RIGHT);
     }
 
@@ -182,7 +183,8 @@ class Prc152View extends WatchUi.WatchFace {
         
         var t = System.getClockTime();
         // Format as frequency: HH.MMM.SS
-        var timeStr = Lang.format("T1:$1$$2$.--", [
+        var timeStr = Lang.format("$1$:$2$$3$.--", [
+            loadResource(Rez.Strings.LabelT1),
             t.hour.format("%02d"),
             t.min.format("%02d")
         ]);
@@ -194,7 +196,8 @@ class Prc152View extends WatchUi.WatchFace {
     private function _drawSecondaryFreq(dc as Dc) {
         var utcTime = DataManager.getUtcTime();
         // Format as frequency: HH.MMM.SS
-        var utc = Lang.format("T2:$1$$2$.--", [
+        var utc = Lang.format("$1$:$2$$3$.--", [
+            loadResource(Rez.Strings.LabelT2),
             utcTime.hour.format("%02d"),
             utcTime.min.format("%02d")
         ]);
@@ -207,8 +210,11 @@ class Prc152View extends WatchUi.WatchFace {
         var cbHeight = _height * 0.675;
         var todayShort = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
         var todayMed = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
-        var dayStr = Lang.format("TYPE $1$ $2$/$3$", [
-            todayMed.day_of_week, todayShort.day, todayShort.month
+        var dayStr = Lang.format("$1$ $2$ $3$/$4$", [
+            loadResource(Rez.Strings.LabelCalendar),
+            todayMed.day_of_week, 
+            todayShort.day, 
+            todayShort.month
         ]);
         dayStr = dayStr.toUpper();
 
@@ -246,15 +252,16 @@ class Prc152View extends WatchUi.WatchFace {
         notifY = cbHeight - (cbHeight * 0.2);
         notifWidth = msgWidthPos + (msgWidthPos * 0.2);
         notifHeight = cbHeight + (cbHeight * 0.2);
-        var notifsStr = Lang.format("MSG $1$", [notifs]);
+        var notifsStr = Lang.format("$1$ $2$", [loadResource(Rez.Strings.LabelCalendar), notifs]);
         dc.drawText(msgWidthPos, cbHeight, _barFont, notifsStr,
                     Graphics.TEXT_JUSTIFY_CENTER);
     }
 
     private function _drawBottomBar(dc as Dc) {
-        dc.setColor(_basicGreen, Graphics.COLOR_TRANSPARENT);
+        dc.setColor(_basicColor, Graphics.COLOR_TRANSPARENT);
         var bottomTxtPos = _height - (_bottomBarIcepick * 0.32);
-        dc.drawText(_width / 2, bottomTxtPos, _bottomLogoFont, "FALCON III",
+
+        dc.drawText(_width / 2, bottomTxtPos, _bottomLogoFont, loadResource(Rez.Strings.Labelfootter),
                     Graphics.TEXT_JUSTIFY_CENTER);
     }
 

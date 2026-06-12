@@ -1,0 +1,12 @@
+<settings>
+    <setting propertyKey="@Properties.AccentColor" title="@Strings.LabelHeader">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorGreen</listEntry>
+            <listEntry value="1">@Strings.ColorPrc</listEntry>
+            <listEntry value="2">@Strings.ColorBlue</listEntry>
+            <listEntry value="3">@Strings.ColorDarkBlue</listEntry>
+            <listEntry value="4">@Strings.ColorWhite</listEntry>
+            <listEntry value="5">@Strings.ColorWhitePhosphorus</listEntry>
+        </settingConfig>
+    </setting>
+</settings>

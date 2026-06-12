@@ -64,4 +64,20 @@ class PRC152Delegate extends WatchUi.WatchFaceDelegate {
         
         return true;
     }
+
+    function onHold(clickEvent as WatchUi.ClickEvent) {
+    var menu = new WatchUi.Menu2({:title => "ACCENT COLOR"});
+
+    for (var i = 0; i < ThemeManager.LABELS.size(); i++) {
+        menu.addItem(new WatchUi.MenuItem(
+            ThemeManager.LABELS[i],  // label shown on watch
+            null,                    // sub-label
+            i,                       // id = palette index
+            {}
+        ));
+    }
+
+    WatchUi.pushView(menu, new ColorMenuDelegate(), WatchUi.SLIDE_UP);
+    return true;
+}
 }

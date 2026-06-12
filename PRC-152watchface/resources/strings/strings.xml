@@ -3,13 +3,21 @@
   <!-- App metadata -->
   <string id="AppName">PRC-152 WatchFace</string>
 
-  <!-- UI static labels — change here, updates everywhere -->
+  <!-- UI static labels-->
   <string id="LabelHeader">WIDEBAND NETWORKING</string>
-  <string id="LabelVulos">VULOS</string>
   <string id="LabelBat">R BAT</string>
-  <string id="LabelTypeM">TYPE M</string>
-  <string id="LabelTdr">TDR</string>
-  <string id="LabelTom">TOM------FT</string>
-  <string id="LabelNoGps">---</string>
-  <string id="LabelGpsFix">FIX</string>
+  <string id="LabelCalendar">TYPE</string>
+  <string id="Labelgsc">GSC</string>
+  <string id="LabelT1">T1</string>
+  <string id="LabelT2">T2</string>
+  <string id="LabelMsg">MSG</string>
+  <string id="Labelfootter">FALCON III</string>
+
+  <!-- COLORS -->
+  <string id="ColorGreen">COLOR_GREEN</string>
+  <string id="ColorPrc">0x005500</string>
+  <string id="ColorBlue">COLOR_BLUE</string>
+  <string id="ColorDarkBlue">Red</string>
+  <string id="ColorWhite">Blue</string>
+  <string id="ColorWhitePhosphorus">White</string>
 </resources>
